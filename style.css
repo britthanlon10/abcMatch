@@ -1,6 +1,8 @@
-body {
+body{
+    padding-bottom: 100px;
+    background-position:center;
+    background-repeat: no-repeat;
     background-color: skyblue;
-    color: rgb(0, 128, 79);
-    background-image: url(Images/animal\ background.jpeg);
+    background-image:url(Images/background43.avif)
 
-  }
+}
