@@ -1,8 +1,7 @@
-body{
-    padding-bottom: 100px;
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-color: skyblue;
-    background-image:url(Images/animalbackground.jpeg)
-
+body {
+  background-image: url(Images/background5.avif);
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
