@@ -1,5 +1,5 @@
 body {
-  background-image: url(Images/background5.avif);
+  background-image: url(Images/background2.jpg);
   height: 100%;
   background-position: center;
   background-repeat: no-repeat;
@@ -7,13 +7,11 @@ body {
   margin-left: 180px;
   margin-right: 180px;
   border: 10px solid green;
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
 }
 
 #title {
-    color: rgb(212, 108, 11);
-    margin-left: 20px;
-    text-align: center;
-
+  color: rgb(212, 108, 11);
+  margin-left: 20px;
+  text-align: center;
 }
-      
