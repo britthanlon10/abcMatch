@@ -15,3 +15,40 @@ body {
   margin-left: 20px;
   text-align: center;
 }
+
+#contentbox {
+    width: 300px;
+    border: 15px solid green;
+    padding: 50px;
+    margin: 20px;
+}
+
+#next {
+    display:inline-block ;
+    width: 10px;
+    height: 10px;
+}
+
+#back {
+    display: none;
+    width: 1rem;
+    height: 1rem;
+}
+
+#skip {
+    display: none;
+    width: 1rem;
+    height: 1rem;
+}
+
+#pause {
+    display: none;
+    width: 1rem;
+    height: 1rem;
+}
+
+#help {
+    display: none;
+    width: 1rem;
+    height: 1rem;
+}
