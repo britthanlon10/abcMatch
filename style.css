@@ -13,14 +13,16 @@ body {
   color: rgb(212, 108, 11);
   margin-left: 20px;
   text-align: center;
+  text-decoration: underline;
+  font-size: 100px;
 }
 
 .photoboxes {
     display: block;
-    width: 120px;
-    height: 80px;
-    margin: 20px;
-    cursor: pointer;
+    width: 220px;
+    height: 160px;
+    margin: 40px;
+    cursor:pointer;
     padding-top: 25px;
     border-radius: 5px;
     animation: tada;
@@ -34,28 +36,29 @@ body {
 
   #box1 {
     position:absolute;
-    left: 560px;
+    left: 425px;
+    top: 250px;
   }
   
   #box2 {
     position: absolute;
-    right: 560px;
+    right: 425px;
+    top: 250px;
   }
   
   #box3 {
     position: absolute;
-    top: 145px;
-    left: 560px;
+    top: 450px;
+    left: 425px;
   }
   
   #box4 {
     position: absolute;
-    top: 145px;
-    right: 560px;
+    top: 450px;
+    right: 425px;
   }
 
   .buttonbox {
-    display: block;
     width: 120px;
     height: 80px;
     margin: 20px;
@@ -67,7 +70,7 @@ body {
     box-shadow: rgba(61, 61, 85, 0.25) 0px 50px 100px -20px,
       rgba(56, 56, 56, 0.3) 0px 30px 60px -30px,
       rgba(74, 74, 75, 0.35) 0px -2px 6px 0px inset;
-    float: left;
     border: 1px solid;
   }
-  
+
+ 
