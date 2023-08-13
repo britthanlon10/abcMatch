@@ -15,44 +15,42 @@ body {
   text-align: center;
 }
 
-#contentbox {
-    width: 300px;
-    border: 15px solid green;
-    padding: 50px;
-    margin: 20px;
-}
-
-#flex-container {
-    display: flex;
-    flex-direction: column;
-}
-
-#next {
-    display:inline-block ;
-    width: 80px;
+.boxes {
+    display: block;
+    width: 120px;
     height: 80px;
-}
+    margin: 20px;
+    cursor: pointer;
+    padding-top: 25px;
+    border-radius: 5px;
+    animation: tada;
+    animation-duration: 1.5s;
+    box-shadow: rgba(61, 61, 85, 0.25) 0px 50px 100px -20px,
+      rgba(56, 56, 56, 0.3) 0px 30px 60px -30px,
+      rgba(74, 74, 75, 0.35) 0px -2px 6px 0px inset;
+    float: left;
+    border: 1px solid;
+  }
 
-#back {
-    display: none;
-    width: 1rem;
-    height: 1rem;
-}
-
-#skip {
-    display: none;
-    width: 1rem;
-    height: 1rem;
-}
-
-#pause {
-    display: none;
-    width: 1rem;
-    height: 1rem;
-}
-
-#help {
-    display: none;
-    width: 1rem;
-    height: 1rem;
-}
+  #box1 {
+    position:absolute;
+    left: 560px;
+  }
+  
+  #box2 {
+    position: absolute;
+    right: 560px;
+  }
+  
+  #box3 {
+    position: absolute;
+    top: 145px;
+    left: 560px;
+  }
+  
+  #box4 {
+    position: absolute;
+    top: 145px;
+    right: 560px;
+  }
+  
