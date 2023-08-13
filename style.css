@@ -15,7 +15,7 @@ body {
   text-align: center;
 }
 
-.boxes {
+.photoboxes {
     display: block;
     width: 120px;
     height: 80px;
@@ -52,5 +52,22 @@ body {
     position: absolute;
     top: 145px;
     right: 560px;
+  }
+
+  .buttonbox {
+    display: block;
+    width: 120px;
+    height: 80px;
+    margin: 20px;
+    cursor: pointer;
+    padding-top: 25px;
+    border-radius: 5px;
+    animation: tada;
+    animation-duration: 1.5s;
+    box-shadow: rgba(61, 61, 85, 0.25) 0px 50px 100px -20px,
+      rgba(56, 56, 56, 0.3) 0px 30px 60px -30px,
+      rgba(74, 74, 75, 0.35) 0px -2px 6px 0px inset;
+    float: left;
+    border: 1px solid;
   }
   
