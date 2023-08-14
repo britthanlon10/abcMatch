@@ -12,14 +12,14 @@ body {
   display: block;
   width: 220px;
   margin: 40px;
+  position: fixed;
 }
 
 .statscontainer {
-  display: block;
-  width: auto;
-  margin: 10px;
-  text-align: center;
-}
+        width: 200px;
+        display: flex;
+        justify-content: center;
+      }
 
 #title {
   color: rgb(212, 108, 11);
@@ -47,25 +47,25 @@ body {
 }
 
 #box1 {
-  position: absolute;
+  position: fixed;
   left: 425px;
   top: 250px;
 }
 
 #box2 {
-  position: absolute;
+  position: fixed;
   right: 425px;
   top: 250px;
 }
 
 #box3 {
-  position: absolute;
+  position: fixed;
   top: 450px;
   left: 425px;
 }
 
 #box4 {
-  position: absolute;
+  position: fixed;
   top: 450px;
   right: 425px;
 }
