@@ -14,6 +14,13 @@ body {
   margin: 40px;
 }
 
+.statscontainer {
+  display: block;
+  width: auto;
+  margin: 10px;
+  text-align: center;
+}
+
 #title {
   color: rgb(212, 108, 11);
   margin-left: 20px;
