@@ -16,10 +16,11 @@ body {
 }
 
 .statscontainer {
-        width: 200px;
-        display: flex;
-        justify-content: center;
-      }
+  width: 200px;
+  display: flex;
+  margin: 20px;
+  justify-content: center;
+}
 
 #title {
   color: rgb(212, 108, 11);
@@ -30,42 +31,37 @@ body {
 }
 
 .photoboxes {
-  display: block;
+  display: absolute;
   width: 220px;
   height: 160px;
   margin: 40px;
   cursor: pointer;
   padding-top: 25px;
   border-radius: 5px;
-  animation: tada;
-  animation-duration: 1.5s;
-  box-shadow: rgba(61, 61, 85, 0.25) 0px 50px 100px -20px,
-    rgba(56, 56, 56, 0.3) 0px 30px 60px -30px,
-    rgba(74, 74, 75, 0.35) 0px -2px 6px 0px inset;
   float: left;
   border: 1px solid;
 }
 
 #box1 {
-  position: fixed;
+  position: absolute;
   left: 425px;
   top: 250px;
 }
 
 #box2 {
-  position: fixed;
+  position: absolute;
   right: 425px;
   top: 250px;
 }
 
 #box3 {
-  position: fixed;
+  position: absolute;
   top: 450px;
   left: 425px;
 }
 
 #box4 {
-  position: fixed;
+  position: absolute;
   top: 450px;
   right: 425px;
 }
@@ -77,10 +73,5 @@ body {
   cursor: pointer;
   padding-top: 25px;
   border-radius: 5px;
-  animation: tada;
-  animation-duration: 1.5s;
-  box-shadow: rgba(61, 61, 85, 0.25) 0px 50px 100px -20px,
-    rgba(56, 56, 56, 0.3) 0px 30px 60px -30px,
-    rgba(74, 74, 75, 0.35) 0px -2px 6px 0px inset;
   border: 1px solid;
 }
