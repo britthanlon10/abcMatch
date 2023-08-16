@@ -31,11 +31,12 @@ body {
 }
 
 .photoboxes {
-  display: absolute;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
   width: 220px;
   height: 160px;
   margin: 40px;
-  cursor: pointer;
   padding-top: 25px;
   border-radius: 5px;
   float: left;
@@ -43,27 +44,64 @@ body {
 }
 
 #box1 {
-  position: absolute;
-  left: 425px;
+  display: flex;
+  flex-direction:row;
+  flex-wrap: wrap;
+  width: 100px;
+  height: 160px;
+  margin: 40px;
+  padding-top: 25px;
+  border-radius: 5px;
+  float: left;
+  border: 1px solid;
+  right: 800px;
   top: 250px;
 }
 
 #box2 {
-  position: absolute;
-  right: 425px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100px;
+  height: 160px;
+  margin: 40px;
+  padding-top: 25px;
+  border-radius: 5px;
+  float: left;
+  border: 1px solid;
+  right: 800px;
   top: 250px;
 }
 
 #box3 {
-  position: absolute;
-  top: 450px;
-  left: 425px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100px;
+  height: 160px;
+  margin: 40px;
+  padding-top: 25px;
+  border-radius: 5px;
+  float: left;
+  border: 1px solid;
+  left: 800px;
+  top: 250px;
 }
 
 #box4 {
-  position: absolute;
-  top: 450px;
-  right: 425px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100px;
+  height: 160px;
+  margin: 40px;
+  cursor: pointer;
+  padding-top: 25px;
+  border-radius: 5px;
+  float: left;
+  border: 1px solid;
+  left: 800px;
+  top: 250px;
 }
 
 .buttonbox {
