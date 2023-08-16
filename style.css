@@ -82,8 +82,43 @@ body {
   border: 1px solid;
 }
 
-#next {}
-#back {}
-#skip {}
-#pause {}
-#help {}
+#next {
+  width: 120px;
+  height: 80px;
+  margin: 30px;
+  padding-top: 25px;
+  border-radius: 5px;
+  border: 1px solid;
+}
+#back {
+  width: 120px;
+  height: 80px;
+  margin: 30px;
+  padding-top: 25px;
+  border-radius: 5px;
+  border: 1px solid;
+}
+#skip {
+  width: 120px;
+  height: 80px;
+  margin: 30px;
+  padding-top: 25px;
+  border-radius: 5px;
+  border: 1px solid;
+}
+#pause {
+  width: 120px;
+  height: 80px;
+  margin: 30px;
+  padding-top: 25px;
+  border-radius: 5px;
+  border: 1px solid;
+}
+#help {
+  width: 120px;
+  height: 80px;
+  margin: 30px;
+  padding-top: 25px;
+  border-radius: 5px;
+  border: 1px solid;
+}
