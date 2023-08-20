@@ -6,14 +6,11 @@ body {
   background-size: cover;
   margin-left: 180px;
   margin-right: 180px;
-  border: 10px solid rgb(226, 226, 226);
   font-size: 25px;
 }
 .titlecontainer {
   display: block;
-  width: 220px;
   margin: 40px;
-  position: relative;
 }
 #title {
   color: rgb(212, 108, 11);
@@ -23,8 +20,6 @@ body {
   font-size: 100px;
 }
 .statscontainer {
-  width: 200px;
-  display: flex;
   margin: 20px;
   justify-content: center;
 }
@@ -54,44 +49,58 @@ body {
 }
 
 #box1 {
+  position: absolute;
+  left: 30%;
+  top: 50%;
   width: 200px;
   height: 200px;
   margin: 40px;
   padding-top: 25px;
   border-radius: 5px;
   border: 1px solid;
+  text-align: center;
 }
 
 #box2 {
+  position: absolute;
+  left: 50%;
+  top: 50%;
   width: 200px;
   height: 200px;
   margin: 40px;
   padding-top: 25px;
   border-radius: 5px;
   border: 1px solid;
+  text-align: center;
 }
 
 #box3 {
+  position: absolute;
+  left: 30%;
+  top: 90%;
   width: 200px;
   height: 200px;
   margin: 40px;
   padding-top: 25px;
   border-radius: 5px;
   border: 1px solid;
+  text-align: center;
 }
 
 #box4 {
+  position: absolute;
+  left: 50%;
+  top: 90%;
   width: 200px;
   height: 200px;
   margin: 40px;
   padding-top: 25px;
   border-radius: 5px;
   border: 1px solid;
+  text-align: center;
 }
 
 .buttonbox {
-  width: 120px;
-  height: 80px;
   margin: 30px;
   padding-top: 25px;
   border-radius: 5px;
@@ -100,41 +109,46 @@ body {
 
 #next {
   width: 120px;
-  height: 80px;
+  height: 55px;
   margin: 30px;
   padding-top: 25px;
   border-radius: 5px;
   border: 1px solid;
+  text-align: center;
 }
 #back {
   width: 120px;
-  height: 80px;
+  height: 55px;
   margin: 30px;
   padding-top: 25px;
   border-radius: 5px;
   border: 1px solid;
+  text-align: center;
 }
 #skip {
   width: 120px;
-  height: 80px;
+  height: 55px;
   margin: 30px;
   padding-top: 25px;
   border-radius: 5px;
   border: 1px solid;
+  text-align: center;
 }
 #pause {
   width: 120px;
-  height: 80px;
+  height: 55px;
   margin: 30px;
   padding-top: 25px;
   border-radius: 5px;
   border: 1px solid;
+  text-align: center;
 }
 #help {
   width: 120px;
-  height: 80px;
+  height: 55px;
   margin: 30px;
   padding-top: 25px;
   border-radius: 5px;
   border: 1px solid;
+  text-align: center;
 }
