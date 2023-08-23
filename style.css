@@ -41,9 +41,9 @@ body {
   width: 200px;
   margin: 20px auto;
   display: center;
-  position: fixed;
   top: 250px;
 left: 750px;
+position: absolute;
 }
   
 #score {
@@ -51,9 +51,9 @@ left: 750px;
   width: 200px;
   margin: 20px auto;
   display: center;
-  position: fixed;
-top: 250px;
-left: 475px;
+position: absolute;
+right: 135%;
+bottom: 20%;
 }
 
 .container {
