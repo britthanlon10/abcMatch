@@ -13,4 +13,4 @@ function pause() {
   clearInterval(timer);
 }
 
-
+var score;
