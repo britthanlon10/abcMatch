@@ -2,46 +2,34 @@
 <html>
   <head>
     <link rel="stylesheet" href="style.css" />
-
     <title>ABC Match!</title>
+    <script type="text/javascript" src="script.js"></script>
   </head>
 
   <body>
     <div class="wrapper">
-    <div class="titlecontainer" id="titlecontainer">
-      <img id="abc" src="Images/blocks-abc-svgrepo-com.svg">
-      <div id="title">Match!</div>
-    </div>
 
-    <div class="statscontainer" id="statscontainer">
-      <div id="js_timer"></div>
-        <div id="timer">
-        </div>
-        <button onclick="pause()">Pause</button>
-
-        <div id="score">0
-          <div id="score">
-          </div>
-          <button onclick="Reset()">Reset</button>
+      <div class="titlecontainer" id="titlecontainer">
+        <img id="abc" src="Images/blocks-abc-svgrepo-com.svg" />
+        <div id="title">Match!</div>
       </div>
-    </div>
 
+      <div class="statscontainer" id="statscontainer">
 
-    <div class="container" id="buttons">
-      <div  id="box1">1</div>
-      <div  id="box2">2</div>
-      <div  id="box3">3</div>
-      <div  id="box4">4</div>
+      <div class="container" id="buttons">
+        <div id="box1">1</div>
+        <div id="box2">2</div>
+        <div id="box3">3</div>
+        <div id="box4">4</div>
 
-      <div class="buttonbox" id="next">Next</div>
-      <div class="buttonbox" id="back">Back</div>
-      <div class="buttonbox" id="skip">Skip</div>
-      <div class="buttonbox" id="pause">Pause</div>
-      <div class="buttonbox" id="help">Help</div>
-  
+        <div class="buttonbox" onclick="operationClicked(this)" id="next"><p>Next</p></div>
+        <div class="buttonbox" onclick="operationClicked(this)" id="back"><p>Back</p></div>
+        <div class="buttonbox" onclick="operationClicked(this)" id="skip"><p>Skip</p></div>
+        <div class="buttonbox" onclick="operationClicked(this)" id="pause"><p>Pause</p></div>
+        <div class="buttonbox" onclick="operationClicked(this)" id="help"><p>Help</p></div>
 
-      <script src="script.js"></script>
-    </div>
+        <script src="script.js"></script>
+      </div>
     </div>
   </body>
 </html>
