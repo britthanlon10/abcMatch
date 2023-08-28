@@ -2,7 +2,7 @@
 var timer;
 var ele = document.getElementById("timer");
 
-(function (){
+(function () {
   var sec = 0;
   timer = setInterval(() => {
     ele.innerHTML = "00:" + sec;
@@ -16,17 +16,14 @@ function pause() {
 
 // score function
 var score;
-var ele = document.getElementById ("score")
-
-(function (){
-    var score = 0;
-    score = setInterval (() => {
-        ele.innerHTML = "00" + score
-        score++;
-    }, 1) // 1 point each
+var ele = document.getElementById("score")(function () {
+  var score = 0;
+  score = setInterval(() => {
+    ele.innerHTML = "00" + score;
+    score++;
+  }, 1); // 1 point each
 })();
 
-function Reset (){
-    clearInterval(score)
+function Reset() {
+  clearInterval(score);
 }
-    
