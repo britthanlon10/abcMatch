@@ -7,3 +7,6 @@ A game to help children learn their alphabet, as well as animals. By using the 4
 ## Motivation
 A project created to help me better understand the use of HTML, CSS and introduce myself to JavaScript functions.
 ## Deployment
+
+## Screenshot
+![screenshotimg](Images/gameScreenshot.png)
