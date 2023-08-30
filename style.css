@@ -37,12 +37,6 @@ body {
   justify-content: center;
 }
 
-#js_timer {
-  text-align: center;
-  text-decoration: underline;
-  font-size: 100px;
-}
-
 #timer {
   color: #000;
   width: 100px;
@@ -55,6 +49,16 @@ body {
   margin: 50px auto;
 }
 
+#restart {
+  color: #000;
+  width: 100px;
+  margin: px auto;
+}
+
+.statscontainer .restart {
+  float: left;
+  cursor: pointer;
+}
 
 
 .container {

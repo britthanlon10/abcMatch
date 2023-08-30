@@ -5,8 +5,3 @@ const OPERATION = {
     Pause : "pause",
     Help : "help"
 };
-
-next.addEventListener ("next", function (e) {
-    console.log ("clicked");
-});
-
