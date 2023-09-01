@@ -16,15 +16,17 @@
 
       <div class="statscontainer" id="statscontainer">
 
-        <div id="js_timer">Time:</div> 
-        <div id="timer">
-           00:00
-           </div>
-        <button>pause</button>
+        <div id="js_timer">
+          <div id="timer">
+            00:00
+          </div>
+          <button onclick="pause()">pause</button>
+          
+        <div>
 
-        <div id="scorebox">Score:</div>
+        <div id="scorebox">
         <div id="score">
-          0
+          Score: 0
 
           <div class="restart">
             <div class="fa fa-repeat">
@@ -38,20 +40,17 @@
         <div id="box3">3</div>
         <div id="box4">4</div>
 
-        <div class="buttonbox" id="next">Next</div>
-        <button onclick="buttonbox (next)"></button>
-        <div class="buttonbox" id="back">Back</div>
-        <button onclick="buttonbox (back)">
-        </button>
-        <div class="buttonbox" id="skip">Skip</div>
-        <button onclick="buttonbox (skip)">
-        </button>
-        <div class="buttonbox" id="pause">Pause</div>
-        <button onclick="buttonbox (pause)">
-        </button>
-        <div class="buttonbox" id="help">Help</div>
-        <button onclick="buttonbox (help)">
-        </button>
+       <div class="buttonbox" id="pause"></div>
+        <button onclick="buttonbox (pause)">Pause</button> 
+        <div class="buttonbox" id="next"></div>
+        <button onclick="buttonbox (next)">Next</button>
+        <div class="buttonbox" id="back"></div>
+        <button onclick="buttonbox (back)">Back</button>
+        <div class="buttonbox" id="skip"></div>
+        <button onclick="buttonbox (skip)">Skip</button>
+        
+        <div class="buttonbox" id="help"></div>
+        <button onclick="buttonbox (help)">Help</button>
 
         <script src="script.js"></script>
       </div>
