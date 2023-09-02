@@ -40,7 +40,7 @@ body {
 #js_timer {
   text-align: center;
 }
-#timer{
+#timer {
   background: #fff;
   color: #000;
   width: 100px;
@@ -66,7 +66,6 @@ body {
   float: left;
   cursor: pointer;
 }
-
 
 .container {
   display: flex;
@@ -142,7 +141,7 @@ body {
   font-size: 16px;
   font-family: Arial, Helvetica, sans-serif;
 }
-  
+
 #pause {
   position: absolute;
   top: 45%;
@@ -209,5 +208,3 @@ body {
 .wrapper {
   height: 1000px;
 }
-
-
