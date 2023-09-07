@@ -43,21 +43,9 @@ body {
   margin-left: 50px;
   }
 
-button {
-  border-radius: 5px;
-  display: inline-block;
-  border: none;
-  padding: 1px 2px;
-  margin: 0;
-  background: #e76f51;
-  color: #ffffff;
-  font-family: sans-serif;
-  font-size: large;
-  cursor: pointer;
-  text-align: center;
-}
+
 .scoreContainer {
-  margin-left: 500px;
+  padding-right: 6500px;
 }
 #score {
   margin-bottom: 100px;
@@ -130,7 +118,7 @@ button {
 }
 
 .buttonbox {
-  margin-left: 80px;
+  margin: 30px;
   margin-top: 5px;
   border: 1px solid;
   background-color: #4caf50; /* Green */
