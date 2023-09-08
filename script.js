@@ -5,7 +5,7 @@ const operation = {
   Pause: "pause",
   Help: "help",
 };
-// https://daily-dev-tips.com/posts/vanilla-javascript-timer/#google_vignette
+// code source: https://daily-dev-tips.com/posts/vanilla-javascript-timer/#google_vignette
 // counting time spent playing game
 const timer = document.getElementById('timer');
 let timerInterval;
@@ -52,6 +52,16 @@ function buttonbox() {
   document.getElementById("next");
   document.getElementById("back");
   document.getElementById("skip");
-  document.getElementById("pause");
+  let button = document.getElementById("pause")
+  function play() {
+    if (button.pause) {
+      button.play();
+    }
+
+    else {
+      button.pause ();
+    }
+  }
+  ;
   document.getElementById("help");
 }
