@@ -1,39 +1,35 @@
-const operation = {
-  Next: "next",
-  Back: "back",
-  Skip: "skip",
-  Pause: "pause",
-  Help: "help",
-};
-// code source: https://daily-dev-tips.com/posts/vanilla-javascript-timer/#google_vignette
-// counting time spent playing game
-const timer = document.getElementById('timer');
-let timerInterval;
+//  const operation = {
+//   Next: "next",
+//    //Back: "back",
+//    Skip: "skip",
+//    Help: "help",
+//  };
+ // code source: https://daily-dev-tips.com/posts/vanilla-javascript-timer/#google_vignette
+
+var timer = document.getElementById("timer");
+var timerInterval;
 
 startTimer = () => {
-  // Firs twe start by clearing the existing timer, in case of a restart
+// clear timer
   clearInterval(timerInterval);
-  // Then we clear the variables
   let second = 0,
     minute = 0,
     hour = 0;
 
-  // Next we set a interval every 1000 ms
+ 
   timerInterval = setInterval(function () {
-    // Toggle the odd class every interval
-    timer.classList.toggle('odd');
-
-    // We set the timer text to include a two digit representation
+  
+    // two digit numbers
     timer.innerHTML =
-      (hour ? hour + ':' : '') +
-      (minute < 10 ? '0' + minute : minute) +
-      ':' +
-      (second < 10 ? '0' + second : second);
+      (hour ? hour + ":" : "") +
+      (minute < 10 ? "0" + minute : minute) +
+      ":" +
+      (second < 10 ? "0" + second : second);
 
-    // Next, we add a new second since one second is passed
+    // + seconds
     second++;
 
-    // We check if the second equals 60 "one minute"
+    // one minute roll over
     if (second == 60) {
       // If so, we add a minute and reset our seconds to 0
       minute++;
@@ -48,20 +44,20 @@ startTimer = () => {
   }, 1000);
 };
 
-function buttonbox() {
-  document.getElementById("next");
-  document.getElementById("back");
-  document.getElementById("skip");
-  let button = document.getElementById("pause")
-  function play() {
-    if (button.pause) {
-      button.play();
-    }
+// function buttonbox() {
+//   document.getElementById("next");
+//   document.getElementById("back");
+//   document.getElementById("skip");
+//   let button = document.getElementById("pause")
+//   function play() {
+//     if (button.pause) {
+//       button.play();
+//     }
 
-    else {
-      button.pause ();
-    }
-  }
-  ;
-  document.getElementById("help");
-}
+//     else {
+//       button.pause ();
+//     }
+//   }
+//   ;
+//   document.getElementById("help");
+// }
