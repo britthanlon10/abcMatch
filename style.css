@@ -133,7 +133,7 @@ body {
 
 #start {
   position: absolute;
-  top: 45%;
+  top: 50%;
   width: 90px;
   height: 20px;
   border-radius: 25px;
@@ -144,7 +144,7 @@ body {
 
 #next {
   position: absolute;
-  top: 55%;
+  top: 60%;
   width: 90px;
   height: 20px;
   border-radius: 25px;
@@ -152,19 +152,10 @@ body {
   text-align: center;
   font-size: 25px;
 }
-#back {
-  position: absolute;
-  top: 65%;
-  width: 90px;
-  height: 20px;
-  border-radius: 25px;
-  border: 1px solid;
-  text-align: center;
-  font-size: 25px;
-}
+
 #skip {
   position: absolute;
-  top: 75%;
+  top: 70%;
   width: 90px;
   height: 20px;
   border-radius: 25px;
@@ -175,7 +166,7 @@ body {
 
 #help {
   position: absolute;
-  top: 85%;
+  top: 80%;
   width: 90px;
   height: 20px;
   border-radius: 25px;

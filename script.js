@@ -42,11 +42,8 @@ function initHelp () {
   alert ("Game Play: Try to find a picture card that matches the letter shown. For example: If shown the letter A, select the picture that shows something that starts with the letter A, like an apple. A correct answer will add a point to the score; if incorrect a point will be subtracted from the score.")
 }
 
+
 // function buttonbox() {
 //   document.getElementById("next");
 //   document.getElementById("back");
 //   document.getElementById("skip");
-//   let button = document.getElementById("pause")
-//   function play() {
-//   document.getElementById("help");
-// }
