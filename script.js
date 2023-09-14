@@ -1,10 +1,4 @@
-//  const operation = {
-//   Next: "next",
-//    //Back: "back",
-//    Skip: "skip",
-//    Help: "help",
-//  };
- // code source: https://daily-dev-tips.com/posts/vanilla-javascript-timer/#google_vignette
+// Timer code source: https://daily-dev-tips.com/posts/vanilla-javascript-timer/#google_vignette
 
 var timer = document.getElementById("timer");
 var timerInterval;
@@ -12,11 +6,11 @@ var timerInterval;
 startTimer = () => {
 // clear timer
   clearInterval(timerInterval);
+  document.getElementById("start").innerHTML = "Restart";
   let second = 0,
     minute = 0,
     hour = 0;
 
- 
   timerInterval = setInterval(function () {
   
     // two digit numbers
@@ -44,20 +38,15 @@ startTimer = () => {
   }, 1000);
 };
 
+function initHelp () {
+  alert ("Game Play: Try to find a picture card that matches the letter shown. For example: If shown the letter A, select the picture that shows something that starts with the letter A, like an apple. A correct answer will add a point to the score; if incorrect a point will be subtracted from the score.")
+}
+
 // function buttonbox() {
 //   document.getElementById("next");
 //   document.getElementById("back");
 //   document.getElementById("skip");
 //   let button = document.getElementById("pause")
 //   function play() {
-//     if (button.pause) {
-//       button.play();
-//     }
-
-//     else {
-//       button.pause ();
-//     }
-//   }
-//   ;
 //   document.getElementById("help");
 // }
