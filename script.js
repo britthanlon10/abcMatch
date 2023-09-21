@@ -44,31 +44,31 @@ function initHelp () {
 
 // adding images for game 
 
-const alligatorImg = document.getElementById('alligator');
-const balloonsImg = document.getElementById('balloons');
-const catImg = document.getElementById('cat');
-const dolphinImg = document.getElementById('dolphin');
-const elephantImg = document.getElementById('elephant');
-const flowerImg = document.getElementById('flower');
-const goatImg = document.getElementById('goat');
-const horseImg = document.getElementById('horse');
-const icecreamImg = document.getElementById('icecream');
-const jellyfishImg = document.getElementById('jellyfish');
-const koalaImg = document.getElementById('koala');
-const ladybugImg = document.getElementById('ladybug');
-const monkeyImg = document.getElementById('monkey');
-const numbersImg = document.getElementById('numbers');
-const octopusImg = document.getElementById('octopus');
-const penguinImg = document.getElementById('penguin');
-const queenImg = document.getElementById('queen');
-const raccoonImg = document.getElementById('raccoon');
-const snailImg = document.getElementById('snail');
-const turtleImg = document.getElementById('turtle');
-const unicornImg = document.getElementById('unicorn');
-const violinImg = document.getElementById('violin');
-const whaleImg = document.getElementById('whale');
-const xylophoneImg = document.getElementById('xylophone');
-const zebraImg = document.getElementById('zebra');
+// const alligatorImg = document.getElementById('alligator');
+//const balloonsImg = document.getElementById('balloons');
+//const catImg = document.getElementById('cat');
+//const dolphinImg = document.getElementById('dolphin');
+//const elephantImg = document.getElementById('elephant');
+//const flowerImg = document.getElementById('flower');
+//const goatImg = document.getElementById('goat');
+//const horseImg = document.getElementById('horse');
+//const icecreamImg = document.getElementById('icecream');
+//const jellyfishImg = document.getElementById('jellyfish');
+//const koalaImg = document.getElementById('koala');
+//const ladybugImg = document.getElementById('ladybug');
+//const monkeyImg = document.getElementById('monkey');
+//const numbersImg = document.getElementById('numbers');
+//const octopusImg = document.getElementById('octopus');
+//const penguinImg = document.getElementById('penguin');
+//const queenImg = document.getElementById('queen');
+//const raccoonImg = document.getElementById('raccoon');
+//const snailImg = document.getElementById('snail');
+//const turtleImg = document.getElementById('turtle');
+//const unicornImg = document.getElementById('unicorn');
+//const violinImg = document.getElementById('violin');
+//const whaleImg = document.getElementById('whale');
+//const xylophoneImg = document.getElementById('xylophone');
+//const zebraImg = document.getElementById('zebra');
 
 // function buttonbox() {
 //   document.getElementById("next");
