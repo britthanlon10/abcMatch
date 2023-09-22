@@ -44,7 +44,7 @@ function initHelp () {
 
 // adding images for game 
 
-// const alligatorImg = document.getElementById('alligator');
+//const alligatorImg = document.getElementById('alligator');
 //const balloonsImg = document.getElementById('balloons');
 //const catImg = document.getElementById('cat');
 //const dolphinImg = document.getElementById('dolphin');
