@@ -1,4 +1,3 @@
-// unfinished, just making files
 // Timer code source: https://daily-dev-tips.com/posts/vanilla-javascript-timer/#google_vignette
 
 var timer = document.getElementById("timer");
