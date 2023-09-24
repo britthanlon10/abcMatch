@@ -1,5 +1,16 @@
-// unfinished, just making files
 // Timer code source: https://daily-dev-tips.com/posts/vanilla-javascript-timer/#google_vignette
+
+const imageList = [
+  "alligator","balloons","cat","dolphin","elephant",
+  "flower","goat","horse","icecream","jellyfish","koala","ladybug",
+  "monkey","numbers","octopus","penguin","queen","raccoon","snail",
+  "turtle","unicorn","violin","whale","xylophone","zebra"
+];
+
+const alphList = [
+  "A","B","C","D","E","F","G","H","I","J","K","L","M",
+  "N","O","P","Q","R","S","T","U","V","W","X","Y","Z"
+];
 
 var timer = document.getElementById("timer");
 var timerInterval;
