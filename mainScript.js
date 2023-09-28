@@ -51,7 +51,12 @@ startTimer = () => {
 };
 
 // score function 
+const scoreDisplay=document.getElementById ('score-display');
 
+// adding points
+function addScore (){
+  
+}
 
 
 function initHelp () {
