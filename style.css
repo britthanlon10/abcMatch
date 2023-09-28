@@ -33,20 +33,20 @@ body {
 }
 
 .scoreContainer {
-  display: flex;
+  display:flexbox;
   flex-wrap: wrap;
   max-width: 700px;
   max-height: 100%;
   align-items: center;
   margin-right: 260px;
-  margin-bottom: 20%;
+  margin-bottom: 40%;
   width: 210px;
 }
 #timer {
   margin-bottom: 25px;
   font-size: xx-large;
   font-weight: bold;
-  margin-left: 50px;
+  margin-left: 350px;
   color: #000000;
   padding-top: 10px;
   border-radius: 20px;
@@ -58,10 +58,10 @@ body {
 }
 
 #score {
-  margin-bottom: 50px;
+  margin-bottom: 70px;
   font-size: xx-large;
   font-weight: bold;
-  margin-left: 200px;
+  margin-left: 670px;
   color: #000000;
   border-radius: 20px;
   border: 8px solid;
