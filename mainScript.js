@@ -2,12 +2,75 @@
 let score = 0;
 let time;
 
-const imageList = [
-  "alligator","balloons","cat","dolphin","elephant",
-  "flower","goat","horse","icecream","jellyfish","koala","ladybug",
-  "monkey","numbers","octopus","penguin","queen","raccoon","snail",
-  "turtle","unicorn","violin","whale","xylophone","zebra"
+const imgElemet = document.getElementById('currentImg');
+const lettersContainer = document.getElementById('lettersContainer');
+const resultMessage = document.getElementById('resultMessage');
+const scoreElement = document.getElementById('currentScore');
+
+// array of image filenames
+const imgFilenames = [
+'alligator.svg', 'balloons.svg','cat.svg','dolphin.svg','elephant.svg',
+'flower.svg','goat.svg','horse.svg','icecream.svg','jellyfish','koala.svg','ladybug.svg',
+'monkey.svg','numbers.svg','octopus.svg','penguin.svg','queen.svg','raccoon.svg','snail.svg',
+'turtle.svg','unicorn.svg','violin.svg','whale.svg','xylophone.svg','zebra.svg'
+]
+
+// score worth 
+const imgWorth = [
+  10, 5, 5, 10, 5,
+  5, 10, 10, 5, 10, 10, 10,
+  10, 15, 15, 10, 15, 10, 5,
+  5, 10, 15, 10, 10, 10
 ];
+
+// function to select a random image from the array
+function getRandomImage() {
+  const randomIndex = Math.floor(Math.random() * imageFilenames.length);
+  return imageFilenames[randomIndex];
+}
+
+// function to initialize the game with a random image
+function initializeGame() {
+  const randomImageFileName = getRandomImage();
+  const randomImageAlt = randomImageFileName.split('.')[0];
+
+  imageElement.src = randomImageFileName;
+  imageElement.alt = randomImageAlt;
+  score = 0;
+  scoreElement.textContent = score;
+  resultMessage.textContent = '';
+}
+
+// add an event listener to each letter button
+const letterButton = document.querySelectorAll('.letterButton');
+letterButton.forEach(button=> {
+  button.addEventListener('click', () => checkMatch(button));
+});
+
+// function to check if the clicked letter matches the image
+function checkMatch(button) {
+  const selectedLetter = button.getAttribute('data-letter');
+  const imageAlt = imageElement.alt.toLowerCase();
+
+  if (selectedLetter.toLowerCase() === imageAlt) {
+    resultMessage.textContent = 'You did it!';
+    score++; //Increase score on correct match
+  } else {
+    resultMessage.textContent = 'Oops! Try again!'
+    score--; // Decreases score on incorrect selection
+  }
+
+  // update score
+  scoreElement.textContent = score;
+  
+  // load new random image after match/mismatch
+  initializeGame();
+}
+
+// load game with random image on page load
+initializeGame();
+
+
 
 const imageWorth = [
   10, 5, 5, 10, 5,
@@ -16,10 +79,6 @@ const imageWorth = [
   5, 10, 15, 10, 10, 10
 ];
 
-const alphList = [
-  "A","B","C","D","E","F","G","H","I","J","K","L","M",
-  "N","O","P","Q","R","S","T","U","V","W","X","Y","Z"
-];
 
 var timer = document.getElementById("timer");
 var timerInterval;
@@ -55,13 +114,24 @@ const scoreDisplay=document.getElementById ('score-display');
 
 // adding points
 function addScore (){
-  
+
 }
 
+const closeButton = document.getElementById('exitButton');
+const infoButton = document.getElementById('initHelp');
+const infoWindow = document.getElementById('controlButton');
 
-function initHelp () {
-  alert ("Game Play: Try to find a picture card that matches the letter shown. For example: If shown the letter A, select the picture that shows something that starts with the letter A, like an apple. A correct answer will add a point to the score; if incorrect a point will be subtracted from the score.")
+closeButton.addEventListener('click', closeInfo);
+infoButton.addEventListener('click', openInfo);
+
+function closeInfo() {
+    infoWindow.style.display = 'none';
 }
+
+function openInfo() {
+    infoWindow.style.display = 'flex';
+}
+
 
 // adding images for game 
 

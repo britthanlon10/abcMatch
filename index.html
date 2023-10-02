@@ -9,18 +9,24 @@
 
   <body>
     <div class="wrapper">
+
+  <div class="controlButton" id="controlButton">
+        <div class="exitButtonContainer">
+          <span class="exitButton" id="exitButton">&times;</span>
+        </div>
 <div class="welcomeMessage">
-  <p>Welcome to ABC Match where you can learn your alphabet and image recognition!
-
-    How to play:
-    Try to find a picture card that matches the letter shown. 
-    For example: If shown the letter A, select the picture that shows something that 
-    starts with the letter A, like an apple. 
-    A correct answer will add a point to the score; if incorrect a point will be 
-    subtracted from the score.
-
+  <p>Welcome to ABC Match where you can learn your alphabet and image recognition!</p>
+  <ul>
+   <p>How to play:</p>
+   <li> 
+    Select the correct letter that matches the first letter of the image name. </li>
+<li>For example: If shown the image of an apple, select the letter A.
+    A correct answer will add points to the score; if incorrect, points will be 
+    subtracted from the score.</li>
+<p>
     Have fun! 
   </p>
+  </ul>
 </div>
       <div class="titlecontainer" id="titlecontainer">
         <img id="abc" src="Images/blocks-abc-svgrepo-com.svg" />
@@ -30,47 +36,80 @@
         <div class="scoreContainer">
           <div class="scoreBoard">
           <div id="timer" id="timer">00:00</div>
-          <div id="score" id ="score">0</div>
         </div>
   
 
       <div class="container" id="buttons">
         <div id="box1">1</div>
-        <div id="box2">2</div>
-        <div id="box3">3</div>
-        <div id="box4">4</div>
+      
 
        <div class="buttonbox" id="start" onclick="startTimer()">Start</div>
         <div class="buttonbox" id="next" onclick="initNext()">Next</div>
         <div class="buttonbox" id="skip" onclick="buttonbox (skip)">Skip</div>
         <div class="buttonbox" id="help" onclick="initHelp (help)">Help</div>
 
-        <!<img src="Images/alligator.svg" alt="" id="alligator" />
-        <!<img src="Images/balloons.svg" alt="" id="balloons" />
-        <!<img src="Images/cat.svg" alt="" id="cat"/>
-        <!<img src="Images/dolphin.svg" alt="" id="dolphin" />
-        <!<img src="Images/elephant.svg" alt="" id="elephant" />
-        <!<img src="Images/flower.svg" alt="" id="flower" />
-        <!<img src="Images/goat.svg" alt="" id="goat" />
-        <!<img src="Images/horse.svg" alt="" id="horse" />
-        <!<img src="Images/icecream.svg" alt="" id="icecream" />
-        <!<img src="Images/jellyfish.svg" alt="" id="jellyfish" />
-        <!<img src="Images/koala.svg" alt="" id="koala" />
-        <!<img src="Images/ladybug.svg" alt="" id="ladybug" />
-        <!<img src="Images/monkey.svg" alt="" id="monkey" />
-        <!<img src="Images/numbers.svg" alt="" id="numbers" />
-        <!<img src="Images/octopus.svg" alt="" id="octopus" />
-        <!<img src="Images/penguin.svg" alt="" id="penguin" />
-        <!<img src="Images/queen.svg" alt="" id="queen" />
-        <!<img src="Images/raccoon.svg" alt="" id="raccoon" />
-        <!<img src="Images/snail.svg" alt="" id="snail" />
-        <!<img src="Images/turtle.svg" alt="" id="turtle" />
-        <!<img src="Images/unicorn.svg" alt="" id="unicorn" />
-        <!<img src="Images/violin.svg" alt="" id="violin" />
-        <!<img src="Images/whale.svg" alt="" id="whale" />
-        <!<img src="Images/xylophone.svg" alt="" id="xylophone" />
-        <!<img src="Images/zebra.svg" alt="" id="zebra" /> 
+        <div class="imgContainer">
+          <img src="" alt="Image" id="currentImg">
+    
+        </div>
+        
+        <div class="lettersContainer" id="letters">
+        <button class="letterButton" data-letter="A">A</button>
+        <button class="letterButton" data-letter="B">B</button>
+        <button class="letterButton" data-letter="C">C</button>
+        <button class="letterButton" data-letter="D">D</button>
+        <button class="letterButton" data-letter="E">E</button>
+        <button class="letterButton" data-letter="F">F</button>
+        <button class="letterButton" data-letter="G">G</button>
+        <button class="letterButton" data-letter="H">H</button>
+        <button class="letterButton" data-letter="I">I</button>
+        <button class="letterButton" data-letter="J">K</button>
+        <button class="letterButton" data-letter="L">L</button>
+        <button class="letterButton" data-letter="M">M</button>
+        <button class="letterButton" data-letter="N">N</button>
+        <button class="letterButton" data-letter="O">O</button>
+        <button class="letterButton" data-letter="P">P</button>
+        <button class="letterButton" data-letter="Q">Q</button>
+        <button class="letterButton" data-letter="R">R</button>
+        <button class="letterButton" data-letter="S">S</button>
+        <button class="letterButton" data-letter="T">T</button>
+        <button class="letterButton" data-letter="U">U</button>
+        <button class="letterButton" data-letter="V">V</button>
+        <button class="letterButton" data-letter="W">W</button>
+        <button class="letterButton" data-letter="X">X</button>
+        <button class="letterButton" data-letter="Y">Y</button>
+        <button class="letterButton" data-letter="Z">Z</button>
+      </div>
+      
+      <p id="resultMessage">You did it! </p>
+      <p id="score">Score: <span id="currentScore">0</span></p>
 
+      <img src="Images/alligator.svg" alt="" id="alligator" />
+      <img src="Images/balloons.svg" alt="" id="balloons" />
+      <img src="Images/cat.svg" alt="" id="cat"/>
+      <img src="Images/dolphin.svg" alt="" id="dolphin" />
+      <img src="Images/elephant.svg" alt="" id="elephant" />
+      <img src="Images/flower.svg" alt="" id="flower" />
+      <img src="Images/goat.svg" alt="" id="goat" />
+      <img src="Images/horse.svg" alt="" id="horse" />
+      <img src="Images/icecream.svg" alt="" id="icecream" />
+      <img src="Images/jellyfish.svg" alt="" id="jellyfish" />
+      <img src="Images/koala.svg" alt="" id="koala" />
+      <img src="Images/ladybug.svg" alt="" id="ladybug" />
+      <img src="Images/monkey.svg" alt="" id="monkey" />
+      <img src="Images/numbers.svg" alt="" id="numbers" />
+      <img src="Images/octopus.svg" alt="" id="octopus" />
+      <img src="Images/penguin.svg" alt="" id="penguin" />
+      <img src="Images/queen.svg" alt="" id="queen" />
+      <img src="Images/raccoon.svg" alt="" id="raccoon" />
+      <img src="Images/snail.svg" alt="" id="snail" />
+      <img src="Images/turtle.svg" alt="" id="turtle" />
+      <img src="Images/unicorn.svg" alt="" id="unicorn" />
+      <img src="Images/violin.svg" alt="" id="violin" />
+      <img src="Images/whale.svg" alt="" id="whale" />
+      <img src="Images/xylophone.svg" alt="" id="xylophone" />
+      <img src="Images/zebra.svg" alt="" id="zebra" /> 
+      
 
         
       </div>
