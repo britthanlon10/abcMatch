@@ -73,7 +73,7 @@ font-size: large;
   border: 1px solid;
   text-align: center;
 }
-img {
+#currentImg {
     max-width: 100%;
     height: auto;
     cursor: pointer;
@@ -82,7 +82,7 @@ img {
     transition: border-color 0.3s ease-in-out;
 }
 
-img:hover {
+#currentImg:hover {
     border-color: #f00; /* Change border color on hover */
 }
 

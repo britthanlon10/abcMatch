@@ -2,7 +2,7 @@
 let score = 0;
 let time;
 
-const imgElemet = document.getElementById('currentImg');
+const imgElement = document.getElementById('currentImg');
 const lettersContainer = document.getElementById('lettersContainer');
 const resultMessage = document.getElementById('resultMessage');
 const scoreElement = document.getElementById('currentScore');
@@ -27,20 +27,20 @@ const imgWorth = [
 
 // selecting next image from array 
 function getNextImage() {
-  const nextImageFilename = imageFilenames [currentImageIndex];
-  const nextImageAlt = nextImageFilename.split ('.')[0];
+  const nextImgFilename = imgFilenames [currentImageIndex];
+  const nextImgAlt = nextImgFilename.split ('.')[0];
 
-  imageElement.src = nextImageFilename;
-  imageElement.alt = nextImageAlt;
+  imgElement.src = nextImgFilename;
+  imgElement.alt = nextImgAlt;
 
   // to get continuous images even after all img have cycled through
-  currentImageIndex = (currentImageIndex + 1) % imageFilenames.length;
+  currentImgIndex = (currentImgIndex + 1) % imgFilenames.length;
 }
 
 // function to initilize the game with first image
 function initializeGame() {
-  currentImageIndex = 0; // start wiht first image
-  getNextImage(); // show first image
+  currentImgIndex = 0; // start wiht first image
+  getNextImg(); // show first image
   score = 0;
   scoreElement.textContent = score;
   resultMessage.textContent = ''
@@ -55,9 +55,9 @@ letterButton.forEach(button=> {
 // function to check if the clicked letter matches the image
 function checkMatch(button) {
   const selectedLetter = button.getAttribute('data-letter');
-  const imageAlt = imageElement.alt.toLowerCase();
+  const imageAlt = imgElement.alt.toLowerCase();
 
-  if (selectedLetter.toLowerCase() === imageAlt) {
+  if (selectedLetter.toLowerCase() === imgAlt) {
     resultMessage.textContent = 'You did it!';
     score++; //Increase score on correct match
   } else {
@@ -69,7 +69,7 @@ function checkMatch(button) {
   scoreElement.textContent = score;
   
   // load new random image after match/mismatch
-  getNextImage();
+  getNextImg();
 }
 
 // load game with random image on page load
