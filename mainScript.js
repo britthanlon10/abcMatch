@@ -15,6 +15,8 @@ const imgFilenames = [
 'turtle.svg','unicorn.svg','violin.svg','whale.svg','xylophone.svg','zebra.svg'
 ]
 
+let currentImageIndex = 0; // index of current displayed image
+
 // score worth 
 const imgWorth = [
   10, 5, 5, 10, 5,
@@ -23,22 +25,25 @@ const imgWorth = [
   5, 10, 15, 10, 10, 10
 ];
 
-// function to select a random image from the array
-function getRandomImage() {
-  const randomIndex = Math.floor(Math.random() * imageFilenames.length);
-  return imageFilenames[randomIndex];
+// selecting next image from array 
+function getNextImage() {
+  const nextImageFilename = imageFilenames [currentImageIndex];
+  const nextImageAlt = nextImageFilename.split ('.')[0];
+
+  imageElement.src = nextImageFilename;
+  imageElement.alt = nextImageAlt;
+
+  // to get continuous images even after all img have cycled through
+  currentImageIndex = (currentImageIndex + 1) % imageFilenames.length;
 }
 
-// function to initialize the game with a random image
+// function to initilize the game with first image
 function initializeGame() {
-  const randomImageFileName = getRandomImage();
-  const randomImageAlt = randomImageFileName.split('.')[0];
-
-  imageElement.src = randomImageFileName;
-  imageElement.alt = randomImageAlt;
+  currentImageIndex = 0; // start wiht first image
+  getNextImage(); // show first image
   score = 0;
   scoreElement.textContent = score;
-  resultMessage.textContent = '';
+  resultMessage.textContent = ''
 }
 
 // add an event listener to each letter button
@@ -64,27 +69,18 @@ function checkMatch(button) {
   scoreElement.textContent = score;
   
   // load new random image after match/mismatch
-  initializeGame();
+  getNextImage();
 }
 
 // load game with random image on page load
 initializeGame();
 
-
-
-const imageWorth = [
-  10, 5, 5, 10, 5,
-  5, 10, 10, 5, 10, 10, 10,
-  10, 15, 15, 10, 15, 10, 5,
-  5, 10, 15, 10, 10, 10
-];
-
-
+// function for timer, when start clicked => restart
 var timer = document.getElementById("timer");
 var timerInterval;
 
 startTimer = () => {
-// clear timer
+
   clearInterval(timerInterval);
   document.getElementById("start").innerHTML = "Restart";
   let second = 0,
@@ -94,7 +90,6 @@ startTimer = () => {
   timerInterval = setInterval(function () {
   
     timer.innerHTML =
-      (hour ? hour + ":" : "") +
       (minute < 10 ? "0" + minute : minute) +
       ":" +
       (second < 10 ? "0" + second : second);
@@ -117,6 +112,7 @@ function addScore (){
 
 }
 
+// information window upon page load
 const closeButton = document.getElementById('exitButton');
 const infoButton = document.getElementById('initHelp');
 const infoWindow = document.getElementById('controlButton');
