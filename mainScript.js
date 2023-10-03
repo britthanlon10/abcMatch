@@ -1,6 +1,7 @@
 // Timer code source: https://daily-dev-tips.com/posts/vanilla-javascript-timer/#google_vignette
 let score = 0;
 let time;
+let numberbox = 1;
 
 const imgElement = document.getElementById('currentImg');
 const lettersContainer = document.getElementById('lettersContainer');
@@ -34,16 +35,16 @@ function getNextImage() {
   imgElement.alt = nextImgAlt;
 
   // to get continuous images even after all img have cycled through
-  currentImgIndex = (currentImgIndex + 1) % imgFilenames.length;
+  currentImgIndex = (currentImageIndex + 1) % imgFilenames.length;
 }
 
-// function to initilize the game with first image
+// function to initilize the game with random image
 function initializeGame() {
-  currentImgIndex = 0; // start wiht first image
-  getNextImg(); // show first image
+  currentImageIndex = Math.floor(Math.random() * imgFilenames.length);
+  getNextImage(); // show random image
   score = 0;
   scoreElement.textContent = score;
-  resultMessage.textContent = ''
+  resultMessage.textContent = '';
 }
 
 // add an event listener to each letter button
