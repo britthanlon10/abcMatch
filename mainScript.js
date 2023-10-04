@@ -114,20 +114,16 @@ function addScore (){
 }
 
 // information window upon page load
-const closeButton = document.getElementById('exitButton');
-const infoButton = document.getElementById('initHelp');
-const infoWindow = document.getElementById('controlButton');
-
-closeButton.addEventListener('click', closeInfo);
-infoButton.addEventListener('click', openInfo);
-
-function closeInfo() {
-    infoWindow.style.display = 'none';
-}
-
-function openInfo() {
-    infoWindow.style.display = 'flex';
-}
+document.addEventListener('DOMContentLoaded'), function (){
+  const welcomeMessageContainer = document.getElementById('welcomeMessage');
+//show the popup message
+welcomeMessageContainer.style.display = 'flex'; // flex for centering
+// close popup message when clicked
+const closeExitButton = document.getElementById('exitButton');
+closeExitButton.addEventListener('click', function (){
+  welcomeMessageContainer.style.display = 'none';
+});
+};
 
 
 // adding images for game 

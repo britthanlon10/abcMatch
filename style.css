@@ -32,11 +32,6 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
-.controlButton {
-  position: flex;
-  z-index: 2;
-  width: auto;
-}
 .welcomeMessage{
   font-size: larger;
   padding: 1rem;
@@ -47,43 +42,14 @@ body {
   border-radius: 0.25rem;
 }
 
-.initHelp {
-  padding: 1rem;
-  z-index: 1;
-  background-color: grey;
-  color: white;
-  border: 0;
-  border-radius: 0.25rem;
+.welcomeContent{
+  background-color: #e8c810;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  text-align: center;
 }
 
-
-.controls {
-  position: fixed;
-  z-index: 2;
-  width: 80vw;
-  border-radius: 2rem;
-  background-color: rgba(97, 97, 216);
-  color: white;
-  padding: 0rem 0rem 1rem 1rem;
-}
-
-.controls-message {
-  font-size: 1.3rem;
-}
-
-.exitButtonContainer {
-  display: flex;
-  justify-content: flex-end;
-}
-
-.exitButton {
-  font-size: 2rem;
-  margin-right: 1rem;
-}
-
-.exitButton:hover {
-  cursor: pointer;
-}
 p {
   font-size: large;
 }
