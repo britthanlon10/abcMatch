@@ -36,20 +36,33 @@ body {
   font-size: larger;
   padding: 1rem;
   z-index: 1;
-  background-color: rgb(226, 205, 19);
   color: rgb(0, 0, 0);
   border: 0;
   border-radius: 0.25rem;
 }
 
 .welcomeContent{
-  background-color: #e8c810;
+  background-color: #c682d5;
   padding: 20px;
   border-radius: 5px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-  text-align: center;
+  text-align:justify;
 }
 
+#exitButton{
+  margin-left:0px;
+  top: 60%;
+  width: 90px;
+  height: 60px;
+  border-radius: 25px;
+  border: 8px solid;
+  background-color: #4caf50;
+  border-color: #2ea832;
+  color: white;
+  text-align: center;
+  font-size: 25px;
+  padding-top: 5px;
+}
 p {
   font-size: large;
 }
