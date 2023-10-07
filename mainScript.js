@@ -1,13 +1,13 @@
-// Timer code source: https://daily-dev-tips.com/posts/vanilla-javascript-timer/#google_vignette
-// let score = 0;
-// let time;
-// let numberbox = 1;
-// let currentImageIndex = 0; // index of current displayed image
+// //Timer code source: https://daily-dev-tips.com/posts/vanilla-javascript-timer/#google_vignette
+let score = 0;
+let time;
+let numberbox = 1;
+let currentImageIndex = 0; // index of current displayed image
 
-// const imgElement = document.getElementById('currentImg');
-// const lettersContainer = document.getElementById('lettersContainer');
-// const resultMessage = document.getElementById('resultMessage');
-// const scoreElement = document.getElementById('currentScore');
+const imgElement = document.getElementById('currentImg');
+const lettersContainer = document.getElementById('lettersContainer');
+const resultMessage = document.getElementById('resultMessage');
+const scoreElement = document.getElementById('currentScore');
 
 // // array of image filenames
 // const imgFilenames = [
@@ -17,7 +17,7 @@
 // 'turtle.svg','unicorn.svg','violin.svg','whale.svg','xylophone.svg','zebra.svg'
 // ]
 
-// score worth 
+// //score worth 
 // const imgWorth = [
 //   10, 5, 5, 10, 5,
 //   5, 10, 10, 5, 10, 10, 10,
@@ -33,7 +33,7 @@
 //   imgElement.src = nextImgFilename;
 //   imgElement.alt = nextImgAlt;
 
-//   // to get continuous images even after all img have cycled through
+// // to get continuous images even after all img have cycled through
 //   currentImgIndex = (currentImageIndex + 1) % imgFilenames.length;
 // }
 
@@ -52,7 +52,7 @@
 //   button.addEventListener('click', () => checkMatch(button));
 // });
 
-// function to check if the clicked letter matches the image
+// // function to check if the clicked letter matches the image
 // function checkMatch(button) {
 //   const selectedLetter = button.getAttribute('data-letter');
 //   const imageAlt = imgElement.alt.toLowerCase();
@@ -63,16 +63,16 @@
 //   } else {
 //     resultMessage.textContent = 'Oops! Try again!'
 //     score--; // Decreases score on incorrect selection
-//   }
+//   }};
 
-  // update score
-  // scoreElement.textContent = score;
+//   // update score
+//   scoreElement.textContent = score;
   
-  // load new random image after match/mismatch
-  // getNextImage();
+//   // load new random image after match/mismatch
+//   getNextImage();
 
 
-// // load game with random image on page load
+// // // load game with random image on page load
 // initializeGame();
 
 // function for timer, when start clicked => restart
@@ -104,39 +104,29 @@ startTimer = () => {
   }, 1000);
 };
 
-// score function 
+// // score function 
 // const scoreDisplay=document.getElementById ('score-display');
 
-// adding points
+// // adding points
 // function addScore (){
 
 // }
 
 // information window upon page load
-// document.addEventListener('DOMContentLoaded'), function (){
-//   const welcomeMessageContainer = document.getElementById('welcomeMessage');
-// //show the popup message
-// welcomeMessageContainer.style.display = 'flex'; // flex for centering
-// // close popup message when clicked
-// const closeExitButton = document.getElementById('exitButton');
-// closeExitButton.addEventListener('click', function (){
-//   welcomeMessageContainer.style.display = 'none';
-// });
-// };
 
 const closeButton = document.getElementById('exitButton');
 const infoButton = document.getElementById('help');
-const infoWindow = document.getElementById('welcomeMessageContainer');
+const welcomeMessage = document.getElementById('welcomeMessage');
 
 closeButton.addEventListener('click', closeInfo);
 infoButton.addEventListener('click', openInfo);
 
 function closeInfo() {
-    infoWindow.style.display = 'none';
+    welcomeMessage.style.display = 'none';
 }
 
 function openInfo() {
-    infoWindow.style.display = 'flex';
+    welcomeMessage.style.display = 'flex';
 }
 
 
@@ -172,3 +162,4 @@ function openInfo() {
 //   document.getElementById("next");
 //   document.getElementById("back");
 //   document.getElementById("skip");
+// }

@@ -3,14 +3,13 @@
   <head>
     <link rel="stylesheet" href="style.css" />
     <title>ABC Match!</title>
-    <script type="text/javascript" src="mainScript.js"></script>
     <meta name="viewport" content="width=device-width, inital-scale=1">
   </head>
 
   <body>
     <div class="wrapper">
 
-<div class="welcomeMessageContainer" id="welcomeMessageContainer">
+<div class="welcomeMessageContainer" id="welcomeMessage" >
   <div class="welcomeContent">
   <p>Welcome to ABC Match where you can learn your alphabet and image recognition!</p>
   <ul>
@@ -24,7 +23,8 @@
     Have fun! 
   </p>
   </ul>
-  <button id="exitButton">Close</button>
+  <button id="exitButton" onclick="closeInfo()">Close</button>
+</div>
 </div>
       <div class="titlecontainer" id="titlecontainer">
         <img id="abc" src="Images/blocks-abc-svgrepo-com.svg" />
