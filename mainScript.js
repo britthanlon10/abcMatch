@@ -9,70 +9,70 @@ const lettersContainer = document.getElementById('lettersContainer');
 const resultMessage = document.getElementById('resultMessage');
 const scoreElement = document.getElementById('currentScore');
 
-// // array of image filenames
-// const imgFilenames = [
-// 'alligator.svg', 'balloons.svg','cat.svg','dolphin.svg','elephant.svg',
-// 'flower.svg','goat.svg','horse.svg','icecream.svg','jellyfish','koala.svg','ladybug.svg',
-// 'monkey.svg','numbers.svg','octopus.svg','penguin.svg','queen.svg','raccoon.svg','snail.svg',
-// 'turtle.svg','unicorn.svg','violin.svg','whale.svg','xylophone.svg','zebra.svg'
-// ]
+// array of image filenames
+const imgFilenames = [
+'alligator.svg', 'balloons.svg','cat.svg','dolphin.svg','elephant.svg',
+'flower.svg','goat.svg','horse.svg','icecream.svg','jellyfish','koala.svg','ladybug.svg',
+'monkey.svg','numbers.svg','octopus.svg','penguin.svg','queen.svg','raccoon.svg','snail.svg',
+'turtle.svg','unicorn.svg','violin.svg','whale.svg','xylophone.svg','zebra.svg'
+]
 
-// //score worth 
-// const imgWorth = [
-//   10, 5, 5, 10, 5,
-//   5, 10, 10, 5, 10, 10, 10,
-//   10, 15, 15, 10, 15, 10, 5,
-//   5, 10, 15, 10, 10, 10
-// ];
+//score worth 
+const imgWorth = [
+  10, 5, 5, 10, 5,
+  5, 10, 10, 5, 10, 10, 10,
+  10, 15, 15, 10, 15, 10, 5,
+  5, 10, 15, 10, 10, 10
+];
 
-// // selecting next image from array 
-// function getNextImage() {
-//   const nextImgFilename = imgFilenames [currentImageIndex];
-//   const nextImgAlt = nextImgFilename.split ('.')[0];
+// selecting next image from array 
+function getNextImage() {
+  const nextImgFilename = imgFilenames [currentImageIndex];
+  const nextImgAlt = nextImgFilename.split ('.')[0];
 
-//   imgElement.src = nextImgFilename;
-//   imgElement.alt = nextImgAlt;
+  imgElement.src = nextImgFilename;
+  imgElement.alt = nextImgAlt;
 
-// // to get continuous images even after all img have cycled through
-//   currentImgIndex = (currentImageIndex + 1) % imgFilenames.length;
-// }
+// to get continuous images even after all img have cycled through
+  currentImgIndex = (currentImageIndex + 1) % imgFilenames.length;
+}
 
-// // function to initilize the game with random image
-// function initializeGame() {
-//   currentImageIndex = Math.floor(Math.random() * imgFilenames.length);
-//   getNextImage(); // show random image
-//   score = 0;
-//   scoreElement.textContent = score;
-//   resultMessage.textContent = '';
-// }
+// function to initilize the game with random image
+function initializeGame() {
+  currentImageIndex = Math.floor(Math.random() * imgFilenames.length);
+  getNextImage(); // show random image
+  score = 0;
+  scoreElement.textContent = score;
+  resultMessage.textContent = '';
+}
 
-// // add an event listener to each letter button
-// const letterButton = document.querySelectorAll('.letterButton');
-// letterButton.forEach(button=> {
-//   button.addEventListener('click', () => checkMatch(button));
-// });
+// add an event listener to each letter button
+const letterButton = document.querySelectorAll('.letterButton');
+letterButton.forEach(button=> {
+  button.addEventListener('click', () => checkMatch(button));
+});
 
-// // function to check if the clicked letter matches the image
-// function checkMatch(button) {
-//   const selectedLetter = button.getAttribute('data-letter');
-//   const imageAlt = imgElement.alt.toLowerCase();
+// function to check if the clicked letter matches the image
+function checkMatch(button) {
+  const selectedLetter = button.getAttribute('data-letter');
+  const imageAlt = imgElement.alt.toLowerCase();
 
-//   if (selectedLetter.toLowerCase() === imgAlt) {
-//     resultMessage.textContent = 'You did it!';
-//     score++; //Increase score on correct match
-//   } else {
-//     resultMessage.textContent = 'Oops! Try again!'
-//     score--; // Decreases score on incorrect selection
-//   }};
+  if (selectedLetter.toLowerCase() === imgAlt) {
+    resultMessage.textContent = 'You did it!';
+    score++; //Increase score on correct match
+  } else {
+    resultMessage.textContent = 'Oops! Try again!'
+    score--; // Decreases score on incorrect selection
+  }};
 
-//   // update score
-//   scoreElement.textContent = score;
+  // update score
+  scoreElement.textContent = score;
   
-//   // load new random image after match/mismatch
-//   getNextImage();
+  // load new random image after match/mismatch
+  getNextImage();
 
 
-// // // load game with random image on page load
+// Breaks code!!// load game with random image on page load
 // initializeGame();
 
 // function for timer, when start clicked => restart
@@ -104,13 +104,13 @@ startTimer = () => {
   }, 1000);
 };
 
-// // score function 
-// const scoreDisplay=document.getElementById ('score-display');
+// score function 
+const scoreDisplay=document.getElementById ('score-display');
 
-// // adding points
-// function addScore (){
+// adding points
+function addScore (){
 
-// }
+}
 
 // information window upon page load
 
