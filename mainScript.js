@@ -3,7 +3,9 @@ let score = 0;
 let time;
 let numberbox = 1;
 let currentImageIndex = 0; // index of current displayed image
+let getRandomInt;
 
+const preloadedImages = [];
 const imgElement = document.getElementById('currentImg');
 const lettersContainer = document.getElementById('lettersContainer');
 const resultMessage = document.getElementById('resultMessage');
@@ -16,6 +18,17 @@ const imgFilenames = [
 'monkey.svg','numbers.svg','octopus.svg','penguin.svg','queen.svg','raccoon.svg','snail.svg',
 'turtle.svg','unicorn.svg','violin.svg','whale.svg','xylophone.svg','zebra.svg'
 ]
+
+function preloadImages () {
+  for (const imgContainer of imgFilenames) {
+    const img = new Image ();
+    img.src = imgContainer;
+    preloadedImages.push(img);
+  }
+}
+
+// call preloadImages to load img before initalizing game
+preloadImages();
 
 //score worth 
 const imgWorth = [
@@ -34,8 +47,18 @@ function getNextImage() {
   imgElement.alt = nextImgAlt;
 
 // to get continuous images even after all img have cycled through
-  currentImgIndex = (currentImageIndex + 1) % imgFilenames.length;
+  currentImageIndex = (currentImageIndex + 1) % imgFilenames.length;
 }
+
+// function to get random image from array
+function getRandomImage () {
+  const randomIndex = getRandomInt (0, imageFilenames.length - 1);
+  return imgFilenames[randomIndex];
+}
+
+document.addEventListener('DOMContentLoaded', function () {
+  initializeGame();
+});
 
 // function to initilize the game with random image
 function initializeGame() {
@@ -70,10 +93,6 @@ function checkMatch(button) {
   
   // load new random image after match/mismatch
   getNextImage();
-
-
-// Breaks code!!// load game with random image on page load
-// initializeGame();
 
 // function for timer, when start clicked => restart
 var timer = document.getElementById("timer");
