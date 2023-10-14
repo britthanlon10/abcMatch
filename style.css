@@ -97,6 +97,12 @@ font-size: large;
     border-color: #f00; /* Change border color on hover */
 }
 
+#alligator {
+  display: none;
+  width: 1rem;
+  height: 1rem;
+}
+
 .scoreContainer {
   display:flex;
   flex-wrap: wrap;

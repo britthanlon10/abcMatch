@@ -16,7 +16,8 @@ const imgFilenames = [
 'alligator.svg', 'balloons.svg','cat.svg','dolphin.svg','elephant.svg',
 'flower.svg','goat.svg','horse.svg','icecream.svg','jellyfish','koala.svg','ladybug.svg',
 'monkey.svg','numbers.svg','octopus.svg','penguin.svg','queen.svg','raccoon.svg','snail.svg',
-'turtle.svg','unicorn.svg','violin.svg','whale.svg','xylophone.svg','zebra.svg'
+'turtle.svg'
+,'unicorn.svg','violin.svg','whale.svg','xylophone.svg','zebra.svg'
 ]
 
 function preloadImages () {
@@ -26,6 +27,25 @@ function preloadImages () {
     preloadedImages.push(img);
   }
 }
+// testing alligaotr img code
+
+const alligatorImg = document.getElementById('alligator');
+
+const alligator = {
+  x: imgPositionAlligator,
+  y: -canvas.height * 0.1,
+  width: canvas.width * 0.1,
+  height: canvas.height * 0.075,
+  dy: canvas.height * 0.0037,
+  image: alligatorImg,
+  fruitScore: 100, 
+}
+
+function drawAlligator() {
+  ctx.drawImage(alligatorImg.img, alligatorImg.x, alligatorImg.y, alligatorImg.width, alligatorImg.height);
+}
+
+
 
 // call preloadImages to load img before initalizing game
 preloadImages();
@@ -67,6 +87,16 @@ function initializeGame() {
   score = 0;
   scoreElement.textContent = score;
   resultMessage.textContent = '';
+}
+
+function newAlligator() {
+  alligatorImg.y = -canvas.height * 0.1;
+  setTimeout(() => {
+      alligatorImg.y = 0;
+  }, 2000);
+  nextImgPositionAlligator = Math.floor(Math.random() * canvas.width * 0.9);
+  randomImgPositionAlligator = nextRandomImgPositionAlligator;
+  alligatorImg.x = randomImgPositionAlligator;
 }
 
 // add an event listener to each letter button
