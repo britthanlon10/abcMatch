@@ -5,6 +5,10 @@ let numberbox = 1;
 let currentImageIndex = 0; // index of current displayed image
 let getRandomInt;
 
+const alligator = {
+  image: alligator,
+}
+
 const preloadedImages = [];
 const imgElement = document.getElementById('currentImg');
 const lettersContainer = document.getElementById('lettersContainer');
@@ -27,25 +31,6 @@ function preloadImages () {
     preloadedImages.push(img);
   }
 }
-// testing alligaotr img code
-
-const alligatorImg = document.getElementById('alligator');
-
-const alligator = {
-  x: imgPositionAlligator,
-  y: -canvas.height * 0.1,
-  width: canvas.width * 0.1,
-  height: canvas.height * 0.075,
-  dy: canvas.height * 0.0037,
-  image: alligatorImg,
-  fruitScore: 100, 
-}
-
-function drawAlligator() {
-  ctx.drawImage(alligatorImg.img, alligatorImg.x, alligatorImg.y, alligatorImg.width, alligatorImg.height);
-}
-
-
 
 // call preloadImages to load img before initalizing game
 preloadImages();
@@ -72,7 +57,7 @@ function getNextImage() {
 
 // function to get random image from array
 function getRandomImage () {
-  const randomIndex = getRandomInt (0, imageFilenames.length - 1);
+  const randomIndex = getRandomInt (0, imgFilenames.length - 1);
   return imgFilenames[randomIndex];
 }
 
@@ -89,16 +74,6 @@ function initializeGame() {
   resultMessage.textContent = '';
 }
 
-function newAlligator() {
-  alligatorImg.y = -canvas.height * 0.1;
-  setTimeout(() => {
-      alligatorImg.y = 0;
-  }, 2000);
-  nextImgPositionAlligator = Math.floor(Math.random() * canvas.width * 0.9);
-  randomImgPositionAlligator = nextRandomImgPositionAlligator;
-  alligatorImg.x = randomImgPositionAlligator;
-}
-
 // add an event listener to each letter button
 const letterButton = document.querySelectorAll('.letterButton');
 letterButton.forEach(button=> {
@@ -110,7 +85,7 @@ function checkMatch(button) {
   const selectedLetter = button.getAttribute('data-letter');
   const imageAlt = imgElement.alt.toLowerCase();
 
-  if (selectedLetter.toLowerCase() === imgAlt) {
+  if (selectedLetter.toLowerCase() === imageAlt) {
     resultMessage.textContent = 'You did it!';
     score++; //Increase score on correct match
   } else {
@@ -154,12 +129,12 @@ startTimer = () => {
 };
 
 // score function 
-const scoreDisplay=document.getElementById ('score-display');
+//const scoreDisplay=document.getElementById ('score-display');
 
 // adding points
-function addScore (){
+//function addScore (){
 
-}
+//}
 
 // information window upon page load
 
