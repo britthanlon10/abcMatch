@@ -71,36 +71,15 @@ li {
 font-size: large;
 }
 
-.imgContainer {
-  display: flex;
-  position: absolute;
-  left: 40%;
-  top: 48%;
-  width: 200px;
-  height: 200px;
-  margin: 40px;
-  padding-top: 40px;
-  border-radius: 5px;
-  border: 1px solid;
-  text-align: center;
-}
 #currentImg {
+  margin-left: 410px;
+  margin-top: 120px;
     max-width: 100%;
     height: auto;
     cursor: pointer;
     border: 2px solid #333;
     border-radius: 5px;
     transition: border-color 0.3s ease-in-out;
-}
-
-#currentImg:hover {
-    border-color: #f00; /* Change border color on hover */
-}
-
-#alligator {
-  display: none;
-  width: 1rem;
-  height: 1rem;
 }
 
 .scoreContainer {
@@ -145,7 +124,7 @@ font-size: large;
 
 .lettersContainer {
   display:flex;
-  justify-content: center;
+  position: absolute;
   flex-wrap: wrap;
   max-width: 200px;
   max-height: 200px;
