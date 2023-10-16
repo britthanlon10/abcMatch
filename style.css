@@ -72,7 +72,7 @@ font-size: large;
 }
 
 .imgContainer {
-  display: none;
+  display: flex;
   position: absolute;
   left: 40%;
   top: 48%;

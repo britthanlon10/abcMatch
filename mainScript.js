@@ -5,14 +5,11 @@ let numberbox = 1;
 let currentImageIndex = 0; // index of current displayed image
 let getRandomInt;
 
-
-
-const preloadedImages = [];
+// const preloadedImages = [];
 const imgElement = document.getElementById('currentImg');
-const lettersContainer = document.getElementById('lettersContainer');
-const resultMessage = document.getElementById('resultMessage');
-const scoreElement = document.getElementById('currentScore');
-
+// const lettersContainer = document.getElementById('lettersContainer');
+// const resultMessage = document.getElementById('resultMessage');
+// const scoreElement = document.getElementById('currentScore');
 // array of image filenames
 const imgFilenames = [
 'alligator.svg', 'balloons.svg','cat.svg','dolphin.svg','elephant.svg',
@@ -22,80 +19,83 @@ const imgFilenames = [
 ,'unicorn.svg','violin.svg','whale.svg','xylophone.svg','zebra.svg'
 ]
 
-function preloadImages () {
-  for (const imgContainer of imgFilenames) {
-    const img = new Image ();
-    img.src = imgContainer;
-    preloadedImages.push(img);
-  }
-}
+
+
+
+// function preloadImages () {
+//   for (const imgContainer of imgFilenames) {
+//     const img = new Image ();
+//     img.src = imgContainer;
+//     preloadedImages.push(img);
+//   }
+// }
 
 // call preloadImages to load img before initalizing game
-preloadImages();
+// preloadImages();
 
 //score worth 
-const imgWorth = [
-  10, 5, 5, 10, 5,
-  5, 10, 10, 5, 10, 10, 10,
-  10, 15, 15, 10, 15, 10, 5,
-  5, 10, 15, 10, 10, 10
-];
+// const imgWorth = [
+//   10, 5, 5, 10, 5,
+//   5, 10, 10, 5, 10, 10, 10,
+//   10, 15, 15, 10, 15, 10, 5,
+//   5, 10, 15, 10, 10, 10
+// ];
 
-// selecting next image from array 
-function getNextImage() {
-  const nextImgFilename = imgFilenames [currentImageIndex];
-  const nextImgAlt = nextImgFilename.split ('.')[0];
+// // selecting next image from array 
+// function getNextImage() {
+//   const nextImgFilename = imgFilenames [currentImageIndex];
+//   const nextImgAlt = nextImgFilename.split ('.')[0];
 
-  imgElement.src = nextImgFilename;
-  imgElement.alt = nextImgAlt;
+//   imgElement.src = nextImgFilename;
+//   imgElement.alt = nextImgAlt;
 
-// to get continuous images even after all img have cycled through
-  currentImageIndex = (currentImageIndex + 1) % imgFilenames.length;
-}
+// // to get continuous images even after all img have cycled through
+//   currentImageIndex = (currentImageIndex + 1) % imgFilenames.length;
+// }
 
-// function to get random image from array
-function getRandomImage () {
-  const randomIndex = getRandomInt (0, imgFilenames.length - 1);
-  return imgFilenames[randomIndex];
-}
+// // function to get random image from array
+// function getRandomImage () {
+//   const randomIndex = getRandomInt (0, imgFilenames.length - 1);
+//   return imgFilenames[randomIndex];
+// }
 
-document.addEventListener('DOMContentLoaded', function () {
-  initializeGame();
-});
+// document.addEventListener('DOMContentLoaded', function () {
+//   initializeGame();
+// });
 
 // function to initilize the game with random image
-function initializeGame() {
-  currentImageIndex = Math.floor(Math.random() * imgFilenames.length);
-  getNextImage(); // show random image
-  score = 0;
-  scoreElement.textContent = score;
-  resultMessage.textContent = '';
-}
+// function initializeGame() {
+//   currentImageIndex = Math.floor(Math.random() * imgFilenames.length);
+//   getNextImage(); // show random image
+//   score = 0;
+//   scoreElement.textContent = score;
+//   resultMessage.textContent = '';
+// }
 
-// add an event listener to each letter button
-const letterButton = document.querySelectorAll('.letterButton');
-letterButton.forEach(button=> {
-  button.addEventListener('click', () => checkMatch(button));
-});
+// // add an event listener to each letter button
+// const letterButton = document.querySelectorAll('.letterButton');
+// letterButton.forEach(button=> {
+//   button.addEventListener('click', () => checkMatch(button));
+// });
 
-// function to check if the clicked letter matches the image
-function checkMatch(button) {
-  const selectedLetter = button.getAttribute('data-letter');
-  const imageAlt = imgElement.alt.toLowerCase();
+// // function to check if the clicked letter matches the image
+// function checkMatch(button) {
+//   const selectedLetter = button.getAttribute('data-letter');
+//   const imageAlt = imgElement.alt.toLowerCase();
 
-  if (selectedLetter.toLowerCase() === imageAlt) {
-    resultMessage.textContent = 'You did it!';
-    score++; //Increase score on correct match
-  } else {
-    resultMessage.textContent = 'Oops! Try again!'
-    score--; // Decreases score on incorrect selection
-  }};
+//   if (selectedLetter.toLowerCase() === imageAlt) {
+//     resultMessage.textContent = 'You did it!';
+//     score++; //Increase score on correct match
+//   } else {
+//     resultMessage.textContent = 'Oops! Try again!'
+//     score--; // Decreases score on incorrect selection
+//   }};
 
-  // update score
-  scoreElement.textContent = score;
+//   // update score
+//   scoreElement.textContent = score;
   
-  // load new random image after match/mismatch
-  getNextImage();
+//   // load new random image after match/mismatch
+//   getNextImage();
 
 // function for timer, when start clicked => restart
 var timer = document.getElementById("timer");
