@@ -5,9 +5,7 @@ let numberbox = 1;
 let currentImageIndex = 0; // index of current displayed image
 let getRandomInt;
 
-const alligator = {
-  image: alligator,
-}
+
 
 const preloadedImages = [];
 const imgElement = document.getElementById('currentImg');
