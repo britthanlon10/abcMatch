@@ -70,11 +70,15 @@ p {
 li {
 font-size: large;
 }
-
+#alligator {
+  height: 200px;
+  width: 200px;
+}
 #currentImg {
   margin-left: 410px;
   margin-top: 120px;
     max-width: 100%;
+    padding-top: 15px;
     height: auto;
     cursor: pointer;
     border: 2px solid #333;

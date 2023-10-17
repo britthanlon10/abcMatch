@@ -5,10 +5,10 @@ let numberbox = 1;
 let currentImageIndex = 0; // index of current displayed image
 let getRandomInt;
 
-// const preloadedImages = [];
+const preloadedImages = [];
 const imgElement = document.getElementById('currentImg');
-// const lettersContainer = document.getElementById('lettersContainer');
-// const resultMessage = document.getElementById('resultMessage');
+const lettersContainer = document.getElementById('lettersContainer');
+const resultMessage = document.getElementById('resultMessage');
 // const scoreElement = document.getElementById('currentScore');
 // array of image filenames
 const imgFilenames = [
