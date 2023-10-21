@@ -180,8 +180,8 @@ function openInfo() {
 //const xylophoneImg = document.getElementById('xylophone');
 //const zebraImg = document.getElementById('zebra');
 
-// function buttonbox() {
-//   document.getElementById("next");
-//   document.getElementById("back");
-//   document.getElementById("skip");
-// }
+function buttonbox() {
+  document.getElementById("next");
+  document.getElementById("back");
+  document.getElementById("skip");
+}
