@@ -12,14 +12,12 @@ const resultMessage = document.getElementById('resultMessage');
 // const scoreElement = document.getElementById('currentScore');
 // array of image filenames
 const imgFilenames = [
-'alligator.svg', 'balloons.svg','cat.svg','dolphin.svg','elephant.svg',
-'flower.svg','goat.svg','horse.svg','icecream.svg','jellyfish','koala.svg','ladybug.svg',
-'monkey.svg','numbers.svg','octopus.svg','penguin.svg','queen.svg','raccoon.svg','snail.svg',
-'turtle.svg'
-,'unicorn.svg','violin.svg','whale.svg','xylophone.svg','zebra.svg'
+  'balloons'//'cat.svg','dolphin.svg','elephant.svg',
+//'flower.svg','goat.svg','horse.svg','icecream.svg','jellyfish','koala.svg','ladybug.svg',
+//'monkey.svg','numbers.svg','octopus.svg','penguin.svg','queen.svg','raccoon.svg','snail.svg',
+//'turtle.svg'
+//,'unicorn.svg','violin.svg','whale.svg','xylophone.svg','zebra.svg' 
 ]
-
-
 
 
 function preloadImages () {
@@ -34,12 +32,12 @@ function preloadImages () {
 preloadImages();
 
 //score worth 
-// const imgWorth = [
-//   10, 5, 5, 10, 5,
-//   5, 10, 10, 5, 10, 10, 10,
-//   10, 15, 15, 10, 15, 10, 5,
-//   5, 10, 15, 10, 10, 10
-// ];
+const imgWorth = [
+  10, 5, 5, 10, 5,
+  5, 10, 10, 5, 10, 10, 10,
+  10, 15, 15, 10, 15, 10, 5,
+  5, 10, 15, 10, 10, 10
+];
 
 // // selecting next image from array 
 function getNextImage() {
@@ -64,13 +62,13 @@ function getNextImage() {
 // });
 
 // function to initilize the game with random image
-// function initializeGame() {
-//   currentImageIndex = Math.floor(Math.random() * imgFilenames.length);
-//   getNextImage(); // show random image
-//   score = 0;
-//   scoreElement.textContent = score;
-//   resultMessage.textContent = '';
-// }
+function initializeGame() {
+  currentImageIndex = Math.floor(Math.random() * imgFilenames.length);
+  getNextImage(); // show random image
+  score = 0;
+  scoreElement.textContent = score;
+  resultMessage.textContent = '';
+}
 
 // // add an event listener to each letter button
 // const letterButton = document.querySelectorAll('.letterButton');
