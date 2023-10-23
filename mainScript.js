@@ -22,16 +22,16 @@ const imgFilenames = [
 
 
 
-// function preloadImages () {
-//   for (const imgContainer of imgFilenames) {
-//     const img = new Image ();
-//     img.src = imgContainer;
-//     preloadedImages.push(img);
-//   }
-// }
+function preloadImages () {
+  for (const imgContainer of imgFilenames) {
+    const img = new Image ();
+    img.src = imgContainer;
+    preloadedImages.push(img);
+  }
+}
 
 // call preloadImages to load img before initalizing game
-// preloadImages();
+preloadImages();
 
 //score worth 
 // const imgWorth = [
@@ -42,16 +42,16 @@ const imgFilenames = [
 // ];
 
 // // selecting next image from array 
-// function getNextImage() {
-//   const nextImgFilename = imgFilenames [currentImageIndex];
-//   const nextImgAlt = nextImgFilename.split ('.')[0];
+function getNextImage() {
+  const nextImgFilename = imgFilenames [currentImageIndex];
+  const nextImgAlt = nextImgFilename.split ('.')[0];
 
-//   imgElement.src = nextImgFilename;
-//   imgElement.alt = nextImgAlt;
+  imgElement.src = nextImgFilename;
+  imgElement.alt = nextImgAlt;
 
 // // to get continuous images even after all img have cycled through
 //   currentImageIndex = (currentImageIndex + 1) % imgFilenames.length;
-// }
+}
 
 // // function to get random image from array
 // function getRandomImage () {
