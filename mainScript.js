@@ -4,6 +4,7 @@ let time;
 let numberbox = 1;
 let currentImageIndex = 0; // index of current displayed image
 let getRandomInt;
+let imagesArray = new Array (0)
 
 const preloadedImages = [];
 const imgElement = document.getElementById('currentImg');
@@ -12,13 +13,12 @@ const resultMessage = document.getElementById('resultMessage');
 // const scoreElement = document.getElementById('currentScore');
 // array of image filenames
 const imgFilenames = [
-  'alligator.svg','balloons.svg','cat.svg','dolphin.svg','elephant.svg',
+'alligator.svg','balloons.svg','cat.svg','dolphin.svg','elephant.svg',
 'flower.svg','goat.svg','horse.svg','icecream.svg','jellyfish','koala.svg','ladybug.svg',
 'monkey.svg','numbers.svg','octopus.svg','penguin.svg','queen.svg','raccoon.svg','snail.svg',
 'turtle.svg'
 ,'unicorn.svg','violin.svg','whale.svg','xylophone.svg','zebra.svg' 
 ]
-
 
 function preloadImages () {
   for (const imgContainer of imgFilenames) {
@@ -47,6 +47,22 @@ function getNextImage() {
   imgElement.src = nextImgFilename;
   imgElement.alt = nextImgAlt;
 
+function getGridLayout() {
+    for (let i = 0; i < nextImgFilename; i++) {
+        getRandomInt(maxNumber);
+        if (imgFilenames.length > 0) {
+            for (let j = 0; j < imgFilenames.length; j++) {
+                while (imagesArray[j].id === getRandomInt) {
+                    getRandomInt(maxNumber);
+                    j=0;
+                }
+            }
+        }
+        // Initial button click called when form opens
+        getImage(getRandomInt);
+    }
+}
+
 // // to get continuous images even after all img have cycled through
 //   currentImageIndex = (currentImageIndex + 1) % imgFilenames.length;
 }
@@ -68,6 +84,16 @@ function initializeGame() {
   score = 0;
   scoreElement.textContent = score;
   resultMessage.textContent = '';
+}
+
+function checkAnswer (imgFilenames, imgWorth, score) {
+if (imgFilenames && imgWorth === "A") {
+  score += 1; // Add score if correct letter selected
+} else {
+  score -= 1;
+}
+
+return score;
 }
 
 // // add an event listener to each letter button
@@ -150,33 +176,33 @@ function openInfo() {
 }
 
 
-// adding images for game 
+//adding images for game 
 
-//const alligatorImg = document.getElementById('alligator');
-//const balloonsImg = document.getElementById('balloons');
-//const catImg = document.getElementById('cat');
-//const dolphinImg = document.getElementById('dolphin');
-//const elephantImg = document.getElementById('elephant');
-//const flowerImg = document.getElementById('flower');
-//const goatImg = document.getElementById('goat');
-//const horseImg = document.getElementById('horse');
-//const icecreamImg = document.getElementById('icecream');
-//const jellyfishImg = document.getElementById('jellyfish');
-//const koalaImg = document.getElementById('koala');
-//const ladybugImg = document.getElementById('ladybug');
-//const monkeyImg = document.getElementById('monkey');
-//const numbersImg = document.getElementById('numbers');
-//const octopusImg = document.getElementById('octopus');
-//const penguinImg = document.getElementById('penguin');
-//const queenImg = document.getElementById('queen');
-//const raccoonImg = document.getElementById('raccoon');
-//const snailImg = document.getElementById('snail');
-//const turtleImg = document.getElementById('turtle');
-//const unicornImg = document.getElementById('unicorn');
-//const violinImg = document.getElementById('violin');
-//const whaleImg = document.getElementById('whale');
-//const xylophoneImg = document.getElementById('xylophone');
-//const zebraImg = document.getElementById('zebra');
+const alligatorImg = document.getElementById('alligator');
+const balloonsImg = document.getElementById('balloons');
+const catImg = document.getElementById('cat');
+const dolphinImg = document.getElementById('dolphin');
+const elephantImg = document.getElementById('elephant');
+const flowerImg = document.getElementById('flower');
+const goatImg = document.getElementById('goat');
+const horseImg = document.getElementById('horse');
+const icecreamImg = document.getElementById('icecream');
+const jellyfishImg = document.getElementById('jellyfish');
+const koalaImg = document.getElementById('koala');
+const ladybugImg = document.getElementById('ladybug');
+const monkeyImg = document.getElementById('monkey');
+const numbersImg = document.getElementById('numbers');
+const octopusImg = document.getElementById('octopus');
+const penguinImg = document.getElementById('penguin');
+const queenImg = document.getElementById('queen');
+const raccoonImg = document.getElementById('raccoon');
+const snailImg = document.getElementById('snail');
+const turtleImg = document.getElementById('turtle');
+const unicornImg = document.getElementById('unicorn');
+const violinImg = document.getElementById('violin');
+const whaleImg = document.getElementById('whale');
+const xylophoneImg = document.getElementById('xylophone');
+const zebraImg = document.getElementById('zebra');
 
 function buttonbox() {
   document.getElementById("next");
