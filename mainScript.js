@@ -12,11 +12,11 @@ const resultMessage = document.getElementById('resultMessage');
 // const scoreElement = document.getElementById('currentScore');
 // array of image filenames
 const imgFilenames = [
-  'balloons'//'cat.svg','dolphin.svg','elephant.svg',
-//'flower.svg','goat.svg','horse.svg','icecream.svg','jellyfish','koala.svg','ladybug.svg',
-//'monkey.svg','numbers.svg','octopus.svg','penguin.svg','queen.svg','raccoon.svg','snail.svg',
-//'turtle.svg'
-//,'unicorn.svg','violin.svg','whale.svg','xylophone.svg','zebra.svg' 
+  'alligator.svg','balloons.svg','cat.svg','dolphin.svg','elephant.svg',
+'flower.svg','goat.svg','horse.svg','icecream.svg','jellyfish','koala.svg','ladybug.svg',
+'monkey.svg','numbers.svg','octopus.svg','penguin.svg','queen.svg','raccoon.svg','snail.svg',
+'turtle.svg'
+,'unicorn.svg','violin.svg','whale.svg','xylophone.svg','zebra.svg' 
 ]
 
 
