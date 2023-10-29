@@ -12,6 +12,10 @@ body {
   display: flex;
   margin: 10px;
 }
+.imagecontainer {
+  display: flex;
+  margin: 10px;
+}
 #title {
   color: rgb(0, 0, 0);
   margin-left: 50px;
@@ -70,11 +74,9 @@ p {
 li {
 font-size: large;
 }
-#alligator {
-  height: 200px;
-  width: 200px;
-}
+
 #currentImg {
+  display: flex;
   margin-left: 410px;
   margin-top: 100px;
     max-width: 140%;
@@ -87,6 +89,7 @@ font-size: large;
     transition: border-color 0.3s ease-in-out;
     background-color: whitesmoke;
 }
+
 
 .scoreContainer {
   display:flex;

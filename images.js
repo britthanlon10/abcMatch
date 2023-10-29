@@ -1,4 +1,4 @@
-const images = [
+const imagesArray = [
 {
     id: 0,
     image: 'images/alligator.svg',
@@ -150,6 +150,8 @@ const images = [
 
 }
 ]
+
+
 
 
 
