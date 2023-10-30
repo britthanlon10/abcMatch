@@ -14,7 +14,17 @@ body {
 }
 .imagecontainer {
   display: flex;
-  margin: 10px;
+  position: center;
+  margin-left: 410px;
+  margin-top: 100px;
+    max-width: 400px;
+    padding-top: 15px;
+    height: 300px;
+    cursor: pointer;
+    border: 2px solid #333;
+    border-radius: 50px;
+    transition: border-color 0.3s ease-in-out;
+    background-color: rgb(177, 221, 245);
 }
 #title {
   color: rgb(0, 0, 0);
@@ -75,29 +85,13 @@ li {
 font-size: large;
 }
 
-#currentImg {
-  display: flex;
-  margin-left: 410px;
-  margin-top: 100px;
-    max-width: 140%;
-    padding-top: 15px;
-    height: 250px;
-    width: 250px;
-    cursor: pointer;
-    border: 2px solid #333;
-    border-radius: 5px;
-    transition: border-color 0.3s ease-in-out;
-    background-color: whitesmoke;
-}
-
-
 .scoreContainer {
   display:flex;
   flex-wrap: wrap;
   max-width: 1000px;
   max-height: 100%;
   align-items: center;
-  margin-right: 260px;
+  margin-right: 400px;
   margin-bottom: 40%;
   width: 210px;
 }
