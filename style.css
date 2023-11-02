@@ -15,7 +15,7 @@ body {
 .imagecontainer {
   display: flex;
   position: center;
-  margin-left: 215px;
+  margin-left: 175px;
   margin-top: 120px;
     max-width: 400px;
     padding-top: 15px;
@@ -93,12 +93,12 @@ font-size: large;
   max-height: 100%;
   align-items: center;
   margin-right: 400px;
-  margin-bottom: 40%;
+  margin-top: -85%;
   width: 210px;
 }
 
 #timer {
-  margin-bottom: 25px;
+  margin-top: 10px;
   font-size: xx-large;
   font-weight: bold;
   margin-left: 350px;
@@ -131,8 +131,10 @@ font-size: large;
   display:flex;
   position:absolute;
   flex-wrap:wrap;
+  top: 70%;
   max-width: 700px;
   max-height: 100px;
+  
  
 }
 
@@ -160,20 +162,7 @@ font-size: large;
 
 #start {
   position: absolute;
-  top: 50%;
-  width: 10px;
-  height: 5px;
-  border-radius: 25px;
-  border: 8px solid;
-  border-color: #2ea832;
-  text-align: center;
-  font-size: 25px;
-  padding-top: 5px;
-}
-
-#next {
-  position: absolute;
-  top: 60%;
+  top: 45%;
   width: 10px;
   height: 5px;
   border-radius: 25px;
@@ -186,7 +175,7 @@ font-size: large;
 
 #skip {
   position: absolute;
-  top: 70%;
+  top: 55%;
   width: 10px;
   height: 5px;
   border-radius: 25px;
@@ -199,7 +188,7 @@ font-size: large;
 
 #help {
   position: absolute;
-  top: 80%;
+  top: 65%;
   width: 10px;
   height: 5px;
   border-radius: 25px;
@@ -211,9 +200,15 @@ font-size: large;
 }
 
 .wrapper {
+  margin-top: -5%;
   height: 500px;
   width: 500px;
   margin-left: 25%;
   background-color: #f1d285;
 
 }
+
+.scoreBoard {
+  display: flex;
+  justify-content: space-around;
+} 
