@@ -1,17 +1,11 @@
 // //Timer code source: https://daily-dev-tips.com/posts/vanilla-javascript-timer/#google_vignette
-// let score = 0;
+
 let time;
-// let numberbox = 1;
-// let currentImageIndex = 0; // index of current displayed image
-// let getRandomInt;
 // let imagesArray = new Array (0)
 
-// const preloadedImages = [];
-// const imgElement = document.getElementById('currentImg');
 const lettersContainer = document.getElementById("lettersContainer");
 const resultMessage = document.getElementById("resultMessage");
 // const scoreElement = document.getElementById('currentScore');
-// array of image filenames
 
 function getRandomImage(imagesArray) {
   // Generate a random index within the range of the array length
@@ -20,7 +14,7 @@ function getRandomImage(imagesArray) {
   // Return the randomly selected image
   return imagesArray[randomIndex];
 }
-
+// array of image filenames
 const imagesArray = [
   "Images/alligator.svg",
   "Images/balloons.svg",
@@ -47,7 +41,7 @@ const imagesArray = [
   "Images/whale.svg",
   "Images/xylophone.svg",
   "Images/yak.svg",
-  "Images/zebra.svg"
+  "Images/zebra.svg",
 ];
 
 const randomImage = getRandomImage(imagesArray);
@@ -59,17 +53,6 @@ const showImageButton = document.getElementById("showImage");
 
 imageElement.src = randomImage;
 
-// function preloadImages () {
-//   for (const imgContainer of imgFilenames) {
-//     const img = new Image ();
-//     img.src = imgContainer;
-//     preloadedImages.push(img);
-//   }
-// }
-
-// // call preloadImages to load img before initalizing game
-// preloadImages();
-
 // //score worth
 // const imgWorth = [
 //   10, 5, 5, 10, 5,
@@ -78,51 +61,6 @@ imageElement.src = randomImage;
 //   5, 10, 15, 10, 10, 10
 // ];
 
-// // selecting next image from array
-// function getNextImage() {
-//   const nextImgFilename = imgFilenames [currentImageIndex];
-//   const nextImgAlt = nextImgFilename.split ('.')[0];
-
-//   imgElement.src = nextImgFilename;
-//   imgElement.alt = nextImgAlt;
-
-// function getGridLayout() {
-//     for (let i = 0; i < nextImgFilename; i++) {
-//         getRandomInt(maxNumber);
-//         if (imgFilenames.length > 0) {
-//             for (let j = 0; j < imgFilenames.length; j++) {
-//                 while (imagesArray[j].id === getRandomInt) {
-//                     getRandomInt(maxNumber);
-//                     j=0;
-//                 }
-//             }
-//         }
-//         // Initial button click called when form opens
-//         getImage(getRandomInt);
-//     }
-// }
-
-// // // to get continuous images even after all img have cycled through
-// //   currentImageIndex = (currentImageIndex + 1) % imgFilenames.length;
-// }
-
-// // function to get random image from array
-// function getRandomImage () {
-//   const randomIndex = getRandomInt (0, imgFilenames.length - 1);
-//   return imgFilenames[randomIndex];
-// }
-
-// document.addEventListener('DOMContentLoaded', function () {
-//   initializeGame();
-// });
-
-// // function to initilize the game with random image
-// function initializeGame() {
-//   currentImageIndex = Math.floor(Math.random() * imgFilenames.length);
-//   getNextImage(); // show random image
-//   score = 0;
-//   scoreElement.textContent = score;
-//   resultMessage.textContent = '';
 // }
 
 // function checkAnswer (imgFilenames, imgWorth, score) {
@@ -130,9 +68,6 @@ imageElement.src = randomImage;
 //   score += 1; // Add score if correct letter selected
 // } else {
 //   score -= 1;
-// }
-
-// return score;
 // }
 
 // // add an event listener to each letter button
@@ -153,12 +88,6 @@ imageElement.src = randomImage;
 //     resultMessage.textContent = 'Oops! Try again!'
 //     score--; // Decreases score on incorrect selection
 //   }};
-
-//   // update score
-//   scoreElement.textContent = score;
-
-//   // load new random image after match/mismatch
-//   getNextImage();
 
 // function for timer, when start clicked => restart
 var timer = document.getElementById("timer");
@@ -186,16 +115,7 @@ startTimer = () => {
   }, 1000);
 };
 
-// score function
-//const scoreDisplay=document.getElementById ('score-display');
-
-// adding points
-//function addScore (){
-
-//}
-
 // information window upon page load
-
 const closeButton = document.getElementById("exitButton");
 const infoButton = document.getElementById("help");
 const welcomeMessage = document.getElementById("welcomeMessage");
@@ -212,7 +132,6 @@ function openInfo() {
 }
 
 //adding images for game
-
 const alligatorImg = document.getElementById("alligator");
 const balloonsImg = document.getElementById("balloons");
 const catImg = document.getElementById("cat");
