@@ -16,15 +16,15 @@ body {
   display: flex;
   position: center;
   margin-left: 160px;
-  margin-top: 80px;
-    max-width: 400px;
-    padding-top: 15px;
+  margin-top: 75px;
+    max-width: 300px;
+    padding-top: 5px;
     height: 300px;
     cursor: pointer;
     border: 2px solid #333;
     border-radius: 50px;
     transition: border-color 0.3s ease-in-out;
-    background-color: rgb(177, 221, 245);
+    background-color: rgb(255, 255, 255);
 }
 
 #title {
@@ -93,7 +93,7 @@ font-size: large;
   max-height: 100%;
   align-items: center;
   margin-right: 400px;
-  margin-top: -85%;
+  margin-top: -82%;
   width: 210px;
 }
 
@@ -129,18 +129,34 @@ font-size: large;
 
 .lettersContainer {
   display:flex;
-  top: 78%;
+  top: 80%;
   position:absolute;
   flex-wrap:wrap;
   max-width: 700px;
   max-height: 100px;
+  padding-left: 60px;
 }
 
 #letters {
-  left: 35%;
-  width: 350px;
-  height: 200px;
-  margin: 40px;
+  margin: 1%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#letters div {
+  display: flex;
+}
+
+.second-row {
+  margin: 1%;
+}
+
+.keyboard-button {
+  font-size:large;
+  margin: 2px;
+  cursor: pointer;
+  text-transform: uppercase;
 }
 
 .buttonbox {
@@ -150,12 +166,12 @@ font-size: large;
   background-color: #4caf50;
   border: none;
   color: white;
-  padding: 15px 32px;
-  text-align: center;
+  padding: 25px 42px;
   display: block;
   font-size: 16px;
   font-family: ui-rounded;
 }
+
 
 #start {
   position: absolute;
@@ -165,7 +181,6 @@ font-size: large;
   border-radius: 25px;
   border: 8px solid;
   border-color: #2ea832;
-  text-align: center;
   font-size: 25px;
   padding-top: 5px;
 }
@@ -178,7 +193,6 @@ font-size: large;
   border-radius: 25px;
   border: 8px solid;
   border-color: #2ea832;
-  text-align:left;
   font-size: 25px;
   padding-top: 5px;
 }
@@ -191,7 +205,6 @@ font-size: large;
   border-radius: 25px;
   border: 8px solid;
   border-color: #2ea832;
-  text-align: center;
   font-size: 25px;
   padding-top: 5px;
 }
