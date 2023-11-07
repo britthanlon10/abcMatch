@@ -7,61 +7,57 @@ const lettersContainer = document.getElementById("lettersContainer");
 const resultMessage = document.getElementById("resultMessage");
 // const scoreElement = document.getElementById('currentScore');
 
-function getRandomImage(imagesArray) {
-  // Generate a random index within the range of the array length
-  const randomIndex = Math.floor(Math.random() * imagesArray.length);
+const keyValueMap = {
+  a: ["A","Images/alligator.svg", "10"],
+  b: ["B","Images/balloons.svg", "5"],
+  c: ["C","Images/cat.svg", "5"],
+  d: ["D","Images/dolphin.svg", "10"],
+  e: ["E","Images/elephant.svg", "5"],
+  f: ["F","Images/flower.svg", "5"],
+  g: ["G","Images/goat.svg", "10"],
+  h: ["H","Images/horse.svg", "5"],
+  i: ["I","Images/icecream.svg", "5"],
+  j: ["J","Images/jellyfish.svg", "10"],
+  k: ["K","Images/koala.svg", "10"],
+  l: ["L","Images/ladybug.svg", "5"],
+  m: ["M","Images/monkey.svg", "5"],
+  n: ["N","Images/numbers.svg", "5"],
+  o: ["O","Images/octopus.svg", "10"],
+  p: ["P","Images/penguin.svg", "10"],
+  q: ["Q","Images/queen.svg", "10"],
+  r: ["R","Images/raccoon.svg", "10"],
+  s: ["S","Images/snail.svg", "5"],
+  t: ["T","Images/turtle.svg", "5"],
+  u: ["U","Images/unicorn.svg", "10"],
+  v: ["V","Images/violin.svg", "10"],
+  w: ["W","Images/whale.svg", "10"],
+  x: ["X","Images/xylophone.svg", "10"],
+  y: ["Y","Images/yak.svg", "20"],
+  z: ["Z","Images/zebra.svg", "10"],
+};
 
-  // Return the randomly selected image
-  return imagesArray[randomIndex];
+function getRandomFirstValue(keyValueMap) {
+  const randomId = String.fromCharCode(97 + Math.floor(Math.random() * 26));
+  const values = keyValueMap[randomId];
+
+  if (values) {
+    return values[1];
+  } else {
+    return null;
+  }
 }
-// array of image filenames
-const imagesArray = [
-  "Images/alligator.svg",
-  "Images/balloons.svg",
-  "Images/balloons.svg",
-  "Images/cat.svg",
-  "Images/dolphin.svg",
-  "Images/elephant.svg",
-  "Images/flower.svg",
-  "Images/horse.svg",
-  "Images/icecream.svg",
-  "Images/jellyfish.svg",
-  "Images/koala.svg",
-  "Images/ladybug.svg",
-  "Images/monkey.svg",
-  "Images/numbers.svg",
-  "Images/octopus.svg",
-  "Images/penguin.svg",
-  "Images/queen.svg",
-  "Images/raccoon.svg",
-  "Images/snail.svg",
-  "Images/turtle.svg",
-  "Images/unicorn.svg",
-  "Images/violin.svg",
-  "Images/whale.svg",
-  "Images/xylophone.svg",
-  "Images/yak.svg",
-  "Images/zebra.svg",
-];
 
-const randomImage = getRandomImage(imagesArray);
-console.log(randomImage);
+const firstRandomValue = getRandomFirstValue(keyValueMap);
+console.log(firstRandomValue);
+
+// const randomImage = getRandomImage(imagesArray);
+// console.log(randomImage);
 
 // Get a reference to the <img> element and the button
 const imageElement = document.getElementById("currentImage");
 const showImageButton = document.getElementById("showImage");
 
-imageElement.src = randomImage;
-
-// //score worth
-// const imgWorth = [
-//   10, 5, 5, 10, 5,
-//   5, 10, 10, 5, 10, 10, 10,
-//   10, 15, 15, 10, 15, 10, 5,
-//   5, 10, 15, 10, 10, 10
-// ];
-
-// }
+imageElement.src = firstRandomValue;
 
 // function checkAnswer (imgFilenames, imgWorth, score) {
 // if (imgFilenames && imgWorth === "A") {
