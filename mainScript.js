@@ -36,35 +36,77 @@ const keyValueMap = {
   z: ["Z","Images/zebra.svg", "10"],
 };
 
+let randomId;
+
 function getRandomFirstValue(keyValueMap) {
-  const randomId = String.fromCharCode(97 + Math.floor(Math.random() * 26));
+  randomId = String.fromCharCode(97 + Math.floor(Math.random() * 26));
   const values = keyValueMap[randomId];
 
   if (values) {
     return values[1];
   } else {
     return null;
-  }
+  };
 }
-
 const firstRandomValue = getRandomFirstValue(keyValueMap);
 console.log(firstRandomValue);
 
-// const randomImage = getRandomImage(imagesArray);
-// console.log(randomImage);
+function getRandomSecondValue(keyValueMap) {
+  const values = keyValueMap[randomId];
 
-// Get a reference to the <img> element and the button
-const imageElement = document.getElementById("currentImage");
-const showImageButton = document.getElementById("showImage");
+  if (values) {
+    return values[0];
+  } else {
+    return null;
+  };
+  }
 
-imageElement.src = firstRandomValue;
+  const secondRandomValue = getRandomSecondValue(keyValueMap);
+  console.log(secondRandomValue);
 
-// function checkAnswer (imgFilenames, imgWorth, score) {
-// if (imgFilenames && imgWorth === "A") {
-//   score += 1; // Add score if correct letter selected
-// } else {
-//   score -= 1;
-// }
+function getRandomThirdValue(keyValueMap) {
+  const values = keyValueMap[randomId];
+
+  if (values) {
+    return values[2];
+  } else {
+    return null;
+  };
+}
+
+const thirdRandomValue = getRandomThirdValue(keyValueMap);
+console.log(thirdRandomValue);
+
+//when this letter is clicked run this function
+let letter;
+
+function getRandomValue(keyValueMap, letter) {
+  const values = keyValueMap[letter];
+
+  if (values) {
+    const randomIndex = Math.floor(Math.random() * values.length);
+    return values[randomIndex];
+  } else {
+    return null;
+  }
+}
+const randomValue = getRandomValue(keyValueMap);
+console.log(randomValue);
+
+const letterButtons = document.querySelectorAll(".letter-button");
+
+letterButtons.forEach((button) => {
+  button.addEventListener("click", function () {
+    const letter = this.getAttribute("data-letter");
+    const firstRandomValue = getRandomValue(keyValueMap, letter);
+    const secondRandomValue = getRandomValue(keyValueMap, letter);
+    const thirdRandomValue = getRandomValue(keyValueMap, letter);
+
+    document.getElementById("firstRandomValue").textContent = "First Random Value for " + letter + ": " + firstRandomValue;
+    document.getElementById("secondRandomValue").textContent = "Second Random Value for " + letter + ": " + secondRandomValue;
+    document.getElementById("thirdRandomValue").textContent = "Third Random Value for " + letter + ": " + thirdRandomValue;
+  });
+});
 
 // // add an event listener to each letter button
 // const letterButton = document.querySelectorAll('.letterButton');
@@ -84,6 +126,16 @@ imageElement.src = firstRandomValue;
 //     resultMessage.textContent = 'Oops! Try again!'
 //     score--; // Decreases score on incorrect selection
 //   }};
+
+// const randomImage = getRandomImage(imagesArray);
+// console.log(randomImage);
+
+// Get a reference to the <img> element and the button
+const imageElement = document.getElementById("currentImage");
+const showImageButton = document.getElementById("showImage");
+
+imageElement.src = firstRandomValue;
+
 
 // function for timer, when start clicked => restart
 var timer = document.getElementById("timer");
@@ -124,35 +176,8 @@ function closeInfo() {
 }
 
 function openInfo() {
-  welcomeMessage.style.display = "flex";
+  welcomeMessage.style.display = "flexx";
 }
-
-//adding images for game
-const alligatorImg = document.getElementById("alligator");
-const balloonsImg = document.getElementById("balloons");
-const catImg = document.getElementById("cat");
-const dolphinImg = document.getElementById("dolphin");
-const elephantImg = document.getElementById("elephant");
-const flowerImg = document.getElementById("flower");
-const goatImg = document.getElementById("goat");
-const horseImg = document.getElementById("horse");
-const icecreamImg = document.getElementById("icecream");
-const jellyfishImg = document.getElementById("jellyfish");
-const koalaImg = document.getElementById("koala");
-const ladybugImg = document.getElementById("ladybug");
-const monkeyImg = document.getElementById("monkey");
-const numbersImg = document.getElementById("numbers");
-const octopusImg = document.getElementById("octopus");
-const penguinImg = document.getElementById("penguin");
-const queenImg = document.getElementById("queen");
-const raccoonImg = document.getElementById("raccoon");
-const snailImg = document.getElementById("snail");
-const turtleImg = document.getElementById("turtle");
-const unicornImg = document.getElementById("unicorn");
-const violinImg = document.getElementById("violin");
-const whaleImg = document.getElementById("whale");
-const xylophoneImg = document.getElementById("xylophone");
-const zebraImg = document.getElementById("zebra");
 
 function buttonbox() {
   document.getElementById("next");
