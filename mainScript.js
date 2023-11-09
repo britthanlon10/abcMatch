@@ -78,35 +78,35 @@ const thirdRandomValue = getRandomThirdValue(keyValueMap);
 console.log(thirdRandomValue);
 
 //when this letter is clicked run this function
-let letter;
+// let letter;
 
-function getRandomValue(keyValueMap, letter) {
-  const values = keyValueMap[letter];
+// function getRandomValue(keyValueMap, letter) {
+//   const values = keyValueMap[letter];
 
-  if (values) {
-    const randomIndex = Math.floor(Math.random() * values.length);
-    return values[randomIndex];
-  } else {
-    return null;
-  }
-}
-const randomValue = getRandomValue(keyValueMap);
-console.log(randomValue);
+//   if (values) {
+//     const randomIndex = Math.floor(Math.random() * values.length);
+//     return values[randomIndex];
+//   } else {
+//     return null;
+//   }
+// }
+// const randomValue = getRandomValue(keyValueMap);
+// console.log(randomValue);
 
-const letterButtons = document.querySelectorAll(".letter-button");
+// const letterButtons = document.querySelectorAll("letter-button");
 
-letterButtons.forEach((button) => {
-  button.addEventListener("click", function () {
-    const letter = this.getAttribute("data-letter");
-    const firstRandomValue = getRandomValue(keyValueMap, letter);
-    const secondRandomValue = getRandomValue(keyValueMap, letter);
-    const thirdRandomValue = getRandomValue(keyValueMap, letter);
+// letterButtons.forEach((button) => {
+//   button.addEventListener("click", function () {
+//     const letter = this.getAttribute("data-letter");
+//     const firstRandomValue = getRandomValue(keyValueMap, letter);
+//     const secondRandomValue = getRandomValue(keyValueMap, letter);
+//     const thirdRandomValue = getRandomValue(keyValueMap, letter);
 
-    document.getElementById("firstRandomValue").textContent = "First Random Value for " + letter + ": " + firstRandomValue;
-    document.getElementById("secondRandomValue").textContent = "Second Random Value for " + letter + ": " + secondRandomValue;
-    document.getElementById("thirdRandomValue").textContent = "Third Random Value for " + letter + ": " + thirdRandomValue;
-  });
-});
+//     document.getElementById("firstRandomValue").textContent = "First Random Value for " + letter + ": " + firstRandomValue;
+//     document.getElementById("secondRandomValue").textContent = "Second Random Value for " + letter + ": " + secondRandomValue;
+//     document.getElementById("thirdRandomValue").textContent = "Third Random Value for " + letter + ": " + thirdRandomValue;
+//   });
+// });
 
 // // add an event listener to each letter button
 // const letterButton = document.querySelectorAll('.letterButton');
