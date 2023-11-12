@@ -86,6 +86,18 @@ li {
 font-size: large;
 }
 
+.keyboardbutton {
+  display: flex; 
+  top: 80%;
+  flex-wrap: wrap;
+  padding-left: 60px;
+  font-family: 'Courier New', Courier, monospace;
+  color:rgb(226, 155, 0);
+  font-size: 20px;
+  height: 50px;
+  width: 550px;
+}
+
 .scoreContainer {
   display:flex;
   flex-wrap: wrap;
@@ -127,32 +139,7 @@ font-size: large;
   padding-top: 5px;
 }
 
-.lettersContainer {
-  display:flex;
-  top: 80%;
-  position:absolute;
-  flex-wrap:wrap;
-  max-width: 700px;
-  max-height: 100px;
-  padding-left: 60px;
-}
-
-#letters {
-  margin: 1%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-#letters div {
-  display: flex;
-}
-
-.second-row {
-  margin: 1%;
-}
-
-.keyboard-button {
+.keyboardbutton {
   font-size:large;
   margin: 2px;
   cursor: pointer;
