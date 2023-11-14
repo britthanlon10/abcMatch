@@ -15,8 +15,8 @@ body {
 .imagecontainer {
   display: flex;
   position: center;
-  margin-left: 160px;
-  margin-top: 75px;
+  margin-left: 215px;
+  margin-top: 50px;
     max-width: 300px;
     padding-top: 5px;
     height: 300px;
@@ -86,26 +86,22 @@ li {
 font-size: large;
 }
 
-.keyboardbutton {
-  display: flex; 
-  top: 80%;
-  flex-wrap: wrap;
-  padding-left: 60px;
-  font-family: 'Courier New', Courier, monospace;
-  color:rgb(226, 155, 0);
-  font-size: 20px;
-  height: 50px;
-  width: 550px;
+.keyboard {
+  width: 500px;
+  display: block;
+  margin: 35vh auto;
+  padding-top: 55px;
+  padding-left: 10px;
 }
 
 .scoreContainer {
-  display:flex;
-  flex-wrap: wrap;
+  display: flex;
+  flex-wrap:wrap;
   max-width: 1000px;
   max-height: 100%;
   align-items: center;
   margin-right: 400px;
-  margin-top: -82%;
+  margin-top: -70%;
   width: 210px;
 }
 
@@ -140,12 +136,31 @@ font-size: large;
 }
 
 .keyboardbutton {
-  font-size:large;
-  margin: 2px;
+  box-sizing: border-box;
+  line-height: 40px;
+  font-size: 11px;
+  text-align: center;
+  width: 40px;
+  color: #555;
   cursor: pointer;
-  text-transform: uppercase;
+  margin: 0 2px;
+  height: 40px;
+  border-color: #f2f2f2;
+  border-style: solid;
+  text-shadow: 0 0.5px 1px #777, 0 2px 6px #f2f2f2;
+  border-width: 1px;
+  border-radius: 10px;
+  background: -webkit-linear-gradient(top, #f9f9f9 0%, #D2D2D2 80%, #c0c0c0 100%);
+  font-family: sans-serif;
+  display: inline-block;
+  transition: box-shadow 0.3s ease, transform 0.15s ease;
+  box-shadow: 0 0 1px #888,0 1px 0 #fff, 0 6px 0 #C0C0C0, 0 8px 17px rgba(#444, 0.4), 2px 1px 4px rgba(#444, 0.25), -2px 1px 4px rgba(#444, 0.25), 0 9px 16px rgba(#444, 0.1);
+  
+  &:active {
+    box-shadow: 0 0 1px #888,0 1px 0 #fff, 0 0 0 #C0C0C0, 0 0px 30px rgba(#444, 0.15), 2px 2px 4px rgba(#444, 0.25), -2px 2px 4px rgba(#444, 0.25), 0 0px 4px rgba(#444, 0.25);
+    transform: translateY(4px); 
+  }
 }
-
 .buttonbox {
   margin: 30px;
   margin-top: 5px;
@@ -153,7 +168,7 @@ font-size: large;
   background-color: #4caf50;
   border: none;
   color: white;
-  padding: 25px 42px;
+  padding: 25px 52px;
   display: block;
   font-size: 16px;
   font-family: ui-rounded;
@@ -162,8 +177,8 @@ font-size: large;
 
 #start {
   position: absolute;
-  top: 45%;
-  width: 10px;
+  top: 43%;
+  width: 30px;
   height: 5px;
   border-radius: 25px;
   border: 8px solid;
@@ -174,8 +189,8 @@ font-size: large;
 
 #skip {
   position: absolute;
-  top: 55%;
-  width: 10px;
+  top: 53%;
+  width: 30px;
   height: 5px;
   border-radius: 25px;
   border: 8px solid;
@@ -186,8 +201,8 @@ font-size: large;
 
 #help {
   position: absolute;
-  top: 65%;
-  width: 10px;
+  top: 63%;
+  width: 30px;
   height: 5px;
   border-radius: 25px;
   border: 8px solid;
@@ -198,9 +213,9 @@ font-size: large;
 
 .wrapper {
   margin-top: 1%;
-  height: 550px;
-  width: 500px;
-  margin-left: 25%;
+  height: 540px;
+  width: 550px;
+  margin-left: 22%;
   border-radius: 20px;
   border: 8px solid;
   background-color: #f1d285;

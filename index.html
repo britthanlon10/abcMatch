@@ -4,90 +4,81 @@
     <link rel="stylesheet" href="style.css" />
 
     <title>ABC Match!</title>
-    <meta name="viewport" content="width=device-width, inital-scale=1">
+    <meta name="viewport" content="width=device-width, inital-scale=1" />
   </head>
 
   <body>
-  
-
-<div class="welcomeMessageContainer" id="welcomeMessage" >
-  <div class="welcomeContent">
-  <p>Welcome to ABC Match where you can learn your alphabet and image recognition!</p>
-  <ul>
-   <p>How to play:</p>
-   <li> 
-    Select the correct letter that matches the first letter of the image name. </li>
-<li>For example: If shown the image of an apple, select the letter A.
-    A correct answer will add points to the score; if incorrect, points will be 
-    subtracted from the score.</li>
-<p>
-    Have fun! 
-  </p>
-  </ul>
-  <button id="exitButton" onclick="closeInfo()">Close</button>
-</div>
-
-</div>
-      <div class="titlecontainer" id="titlecontainer">
-        <img id="abc" src="Images/blocks-abc-svgrepo-com.svg" />
-        <div id="title">Match!</div>
-</div>
-  <div class="wrapper">
-      <div class="imagecontainer" >
-        <img  id="currentImage" src="" />
+    <div class="welcomeMessageContainer" id="welcomeMessage">
+      <div class="welcomeContent">
+        <p>
+          Welcome to ABC Match where you can learn your alphabet and image
+          recognition!
+        </p>
+        <ul>
+          <p>How to play:</p>
+          <li>
+            Select the correct letter that matches the first letter of the image
+            name.
+          </li>
+          <li>
+            For example: If shown the image of an apple, select the letter A. A
+            correct answer will add points to the score; if incorrect, points
+            will be subtracted from the score.
+          </li>
+          <p>Have fun!</p>
+        </ul>
+        <button id="exitButton" onclick="closeInfo()">Close</button>
       </div>
-        <div class="scoreContainer">
-          <div class="scoreBoard">
+    </div>
+    <div class="titlecontainer" id="titlecontainer">
+      <img id="abc" src="Images/blocks-abc-svgrepo-com.svg" />
+      <div id="title">Match!</div>
+    </div>
+    <div class="wrapper">
+      <div class="imagecontainer">
+        <img id="currentImage" src="" height="300px" width="300px" />
+      </div>
+      <div class="scoreContainer">
+        <div class="scoreBoard">
           <div id="timer" id="timer">00:00</div>
         </div>
         <p id="score">Score: <span id="currentScore">0</span></p>
 
-     
-      
         <div class="buttonbox" id="start" onclick="startTimer()">Start</div>
-        <div class="buttonbox" id="skip" onclick="getRandomImage(imagesArray)">Skip</div>
+        <div class="buttonbox" id="skip" onclick="getRandomImage(imagesArray)">
+          Skip
+        </div>
         <div class="buttonbox" id="help" onclick="initHelp (help)">Help</div>
-
-        <div class="keyboard">
-          <div class="first-row">
-              <button class="keyboardbutton" id="Q">Q</button>
-              <button class="keyboardbutton" id="W">W</button>
-              <button class="keyboardbutton" id="E">E</button>
-              <button class="keyboardbutton" id="R">R</button>
-              <button class="keyboardbutton" id="T">T</button>
-              <button class="keyboardbutton" id="Y">Y</button>
-              <button class="keyboardbutton" id="U">U</button>
-              <button class="keyboardbutton" id="I">I</button>
-              <button class="keyboardbutton" id="O">O</button>
-              <button class="keyboardbutton" id="P">P</button>
-          </div>
-          <div class="second-row">
-              <button class="keyboardbutton" id="DEL">DEL</button>
-              <button class="keyboardbutton" id="A">A</button>
-              <button class="keyboardbutton" id="S">S</button>
-              <button class="keyboardbutton" id="D">D</button>
-              <button class="keyboardbutton" id="F">F</button>
-              <button class="keyboardbutton" id="G">G</button>
-              <button class="keyboardbutton" id="H">H</button>
-              <button class="keyboardbutton" id="J">J</button>
-              <button class="keyboardbutton" id="K">K</button>
-              <button class="keyboardbutton" id="L">L</button>
-              <button class="keyboardbutton" id="ENTER">ENTER</button>
-          </div>
-          <div class="third-row">
-              <button class="keyboardbutton" id="Z">Z</button>
-              <button class="keyboardbutton" id="X">X</button>
-              <button class="keyboardbutton" id="C">C</button>
-              <button class="keyboardbutton" id="V">V</button>
-              <button class="keyboardbutton" id="B">B</button>
-              <button class="keyboardbutton" id="N">N</button>
-              <button class="keyboardbutton" id="M">M</button>
-             
-          </div>
       </div>
-      
+      <div class="keyboard">
+        <button class="keyboardbutton" id="Q">Q</button>
+        <button class="keyboardbutton" id="W">W</button>
+        <button class="keyboardbutton" id="E">E</button>
+        <button class="keyboardbutton" id="R">R</button>
+        <button class="keyboardbutton" id="T">T</button>
+        <button class="keyboardbutton" id="Y">Y</button>
+        <button class="keyboardbutton" id="U">U</button>
+        <button class="keyboardbutton" id="I">I</button>
+        <button class="keyboardbutton" id="O">O</button>
+        <button class="keyboardbutton" id="P">P</button>
+        <button class="keyboardbutton" id="A">A</button>
+        <button class="keyboardbutton" id="S">S</button>
+        <button class="keyboardbutton" id="D">D</button>
+        <button class="keyboardbutton" id="F">F</button>
+        <button class="keyboardbutton" id="G">G</button>
+        <button class="keyboardbutton" id="H">H</button>
+        <button class="keyboardbutton" id="J">J</button>
+        <button class="keyboardbutton" id="K">K</button>
+        <button class="keyboardbutton" id="L">L</button>
+        <button class="keyboardbutton" id="Z">Z</button>
+        <button class="keyboardbutton" id="X">X</button>
+        <button class="keyboardbutton" id="C">C</button>
+        <button class="keyboardbutton" id="V">V</button>
+        <button class="keyboardbutton" id="B">B</button>
+        <button class="keyboardbutton" id="N">N</button>
+        <button class="keyboardbutton" id="M">M</button>
+      </div>
     </div>
-</div>
     <script src="mainScript.js"></script>
   </body>
 </html>
