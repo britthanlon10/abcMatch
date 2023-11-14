@@ -35,6 +35,7 @@ const keyValueMap = {
 };
 
 let randomId;
+const imageElement = document.getElementById("currentImage");
 
 function getRandomFirstValue(keyValueMap) {
   randomId = String.fromCharCode(97 + Math.floor(Math.random() * 26));
@@ -48,6 +49,7 @@ function getRandomFirstValue(keyValueMap) {
 }
 const firstRandomValue = getRandomFirstValue(keyValueMap);
 console.log(firstRandomValue);
+imageElement.src = firstRandomValue;
 
 function getRandomSecondValue(keyValueMap) {
   const values = keyValueMap[randomId];
@@ -92,10 +94,10 @@ console.log(thirdRandomValue);
 // console.log(randomImage);
 
 // Get a reference to the <img> element and the button
-const imageElement = document.getElementById("currentImage");
+
 const showImageButton = document.getElementById("showImage");
 
-imageElement.src = firstRandomValue;
+
 
 
 // function for timer, when start clicked => restart
@@ -145,3 +147,10 @@ function buttonbox() {
   document.getElementById("help");
   document.getElementById("skip");
 }
+
+const skipButton = document.getElementById("skip");
+
+function nextImage() {
+
+}
+
