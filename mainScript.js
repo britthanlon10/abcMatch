@@ -137,11 +137,11 @@ function closeInfo() {
 }
 
 function openInfo() {
-  welcomeMessage.style.display = "flexx";
+  welcomeMessage.style.display = "flex";
 }
 
 function buttonbox() {
-  document.getElementById("next");
-  document.getElementById("back");
+  document.getElementById("start");
+  document.getElementById("help");
   document.getElementById("skip");
 }
