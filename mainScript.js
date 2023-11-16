@@ -51,6 +51,12 @@ const firstRandomValue = getRandomFirstValue(keyValueMap);
 console.log(firstRandomValue);
 imageElement.src = firstRandomValue;
 
+function assignImage() {
+  getRandomFirstValue(keyValueMap);
+  imageElement.setAttribute('src', firstRandomValue);
+};
+
+
 function getRandomSecondValue(keyValueMap) {
   const values = keyValueMap[randomId];
 
@@ -77,26 +83,23 @@ function getRandomThirdValue(keyValueMap) {
 const thirdRandomValue = getRandomThirdValue(keyValueMap);
 console.log(thirdRandomValue);
 
-// // function to check if the clicked letter matches the image
-// function checkMatch(button) {
-//   const selectedLetter = button.getAttribute('data-letter');
-//   const imageAlt = imgElement.alt.toLowerCase();
-
-//   if (selectedLetter.toLowerCase() === imageAlt) {
-//     resultMessage.textContent = 'You did it!';
-//     score++; //Increase score on correct match
-//   } else {
-//     resultMessage.textContent = 'Oops! Try again!'
-//     score--; // Decreases score on incorrect selection
-//   }};
-
-// const randomImage = getRandomImage(imagesArray);
-// console.log(randomImage);
-
 // Get a reference to the <img> element and the button
 
 const showImageButton = document.getElementById("showImage");
 
+// function not
+function matchButtonIdToValue(buttonId) {
+  const buttonLetter = buttonId.toLowerCase(); 
+  const values = keyValueMap[buttonLetter];
+  const matchedValue = values[0];
+  if (matchedValue == secondRandomValue) {
+  // code that runs when correct answer is chosen
+   console.log("Nice one!")
+  } else {
+    // code that runs when incorrect answer is chosen
+    console.log("Try again")
+  }
+};
 
 
 
