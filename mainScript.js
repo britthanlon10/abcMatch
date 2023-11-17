@@ -37,6 +37,7 @@ const keyValueMap = {
 let randomId;
 const imageElement = document.getElementById("currentImage");
 
+// picks random value in keyValueMap
 function getRandomFirstValue(keyValueMap) {
   randomId = String.fromCharCode(97 + Math.floor(Math.random() * 26));
   const values = keyValueMap[randomId];
@@ -56,7 +57,7 @@ function assignImage() {
   imageElement.setAttribute('src', firstRandomValue);
 };
 
-
+// picks random letter in keyValueMap
 function getRandomSecondValue(keyValueMap) {
   const values = keyValueMap[randomId];
 
@@ -70,6 +71,7 @@ function getRandomSecondValue(keyValueMap) {
   const secondRandomValue = getRandomSecondValue(keyValueMap);
   console.log(secondRandomValue);
 
+// picks score from keyValueMap
 function getRandomThirdValue(keyValueMap) {
   const values = keyValueMap[randomId];
 
@@ -87,21 +89,21 @@ console.log(thirdRandomValue);
 
 const showImageButton = document.getElementById("showImage");
 
-// function not
+// Matches keyboard buttons to images + score (soon)
 function matchButtonIdToValue(buttonId) {
   const buttonLetter = buttonId.toLowerCase(); 
   const values = keyValueMap[buttonLetter];
   const matchedValue = values[0];
   if (matchedValue == secondRandomValue) {
   // code that runs when correct answer is chosen
-   console.log("Nice one!")
+   console.log("Good Job!")
+   alert("Good Job!")
   } else {
     // code that runs when incorrect answer is chosen
-    console.log("Try again")
+    console.log("Keep Trying!")
+    alert("Keep Trying!")
   }
 };
-
-
 
 // function for timer, when start clicked => restart
 var timer = document.getElementById("timer");
