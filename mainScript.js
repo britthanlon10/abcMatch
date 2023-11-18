@@ -55,6 +55,12 @@ imageElement.src = firstRandomValue;
 function assignImage() {
   getRandomFirstValue(keyValueMap);
   imageElement.setAttribute('src', firstRandomValue);
+
+  if (values) {
+    return values[1];
+  } else {
+    return null;
+  };
 };
 
 // picks random letter in keyValueMap
@@ -89,7 +95,7 @@ console.log(thirdRandomValue);
 
 const showImageButton = document.getElementById("showImage");
 
-// Matches keyboard buttons to images + score (soon)
+// Matches keyboard buttons to images
 function matchButtonIdToValue(buttonId) {
   const buttonLetter = buttonId.toLowerCase(); 
   const values = keyValueMap[buttonLetter];
