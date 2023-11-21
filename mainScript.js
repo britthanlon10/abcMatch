@@ -56,11 +56,13 @@ function assignImage() {
   getRandomFirstValue(keyValueMap);
   imageElement.setAttribute('src', firstRandomValue);
 
-  if (values) {
-    return values[1];
+  if (time < 10) {
+    greeting = "Good morning";
+  } else if (time < 20) {
+    greeting = "Good day";
   } else {
-    return null;
-  };
+    greeting = "Good evening";
+  }
 };
 
 // picks random letter in keyValueMap
