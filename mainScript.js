@@ -34,6 +34,14 @@ const keyValueMap = {
   z: ["Z","Images/zebra.svg", "10"],
 };
 
+function buttonbox() {
+  document.getElementById("start");
+  document.getElementById("help");
+  document.getElementById("skip");
+}
+
+
+
 let randomId;
 const imageElement = document.getElementById("currentImage");
 
@@ -113,6 +121,28 @@ function matchButtonIdToValue(buttonId) {
   }
 };
 
+const skipButton = document.getElementById("skip");
+
+skipButton.addEventListener("click", () => {
+  checkImage();
+})
+
+function checkImage () {
+  const matchedValue= getRandomSecondValue(keyValueMap);
+
+  if (matchedValue === secondRandomValue) {
+    assignImage(); //This function will assign a new random image
+  } else {
+    return null
+  }
+}
+
+function assignImage() {
+  const newRandomValue = getRandomFirstValue(keyValueMap);
+  imageElement.setAttribute('src', newRandomValue);
+  secondRandomValue = getRandomSecondValue(keyValueMap); // Update the secondRandomValue
+}
+
 // function for timer, when start clicked => restart
 var timer = document.getElementById("timer");
 var timerInterval;
@@ -155,15 +185,5 @@ function openInfo() {
   welcomeMessage.style.display = "flex";
 }
 
-function buttonbox() {
-  document.getElementById("start");
-  document.getElementById("help");
-  document.getElementById("skip");
-}
 
-const skipButton = document.getElementById("skip");
-
-function nextImage() {
-
-}
 
