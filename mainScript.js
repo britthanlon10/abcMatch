@@ -40,10 +40,9 @@ function buttonbox() {
   document.getElementById("skip");
 }
 
-
-
 let randomId;
 const imageElement = document.getElementById("currentImage");
+
 
 // picks random value in keyValueMap
 function getRandomFirstValue(keyValueMap) {
@@ -61,18 +60,10 @@ const firstRandomValue = getRandomFirstValue(keyValueMap);
 console.log(firstRandomValue);
 imageElement.src = firstRandomValue;
 
-function assignImage() {
-  getRandomFirstValue(keyValueMap);
-  imageElement.setAttribute("src", firstRandomValue);
-
-  if (time < 10) {
-    greeting = "Good morning";
-  } else if (time < 20) {
-    greeting = "Good day";
-  } else {
-    greeting = "Good evening";
-  }
-}
+// function assignImage() {
+//   getRandomFirstValue(keyValueMap);
+//   imageElement.setAttribute("src", firstRandomValue);
+// }
 
 // picks random letter in keyValueMap
 function getRandomSecondValue(keyValueMap) {
@@ -99,28 +90,39 @@ function getRandomThirdValue(keyValueMap) {
   }
 }
 
+function matchButtonIdToValue(buttonId) {
+  const buttonLetter = buttonId.toLowerCase(); 
+  const values = keyValueMap[buttonLetter];
+  const matchedValue = values[0];
+  if (matchedValue == secondRandomValue) {
+  // code that runs when correct answer is chosen
+   console.log("Nice one!")
+  } else {
+    // code that runs when incorrect answer is chosen
+    console.log("Try again")
+  }
+};
+
+
 const thirdRandomValue = getRandomThirdValue(keyValueMap);
 console.log(thirdRandomValue);
 
 // Get a reference to the <img> element and the button
 
 const showImageButton = document.getElementById("showImage");
+const skipButton = document.getElementById("skip");
 
-// Matches keyboard buttons to images
-function matchButtonIdToValue(buttonId) {
-  const buttonLetter = buttonId.toLowerCase();
-  const values = keyValueMap[buttonLetter];
-  const matchedValue = values[0];
-  if (matchedValue == secondRandomValue) {
-    // code that runs when correct answer is chosen
-    console.log("Good Job!");
-    alert("Good Job!");
-  } else {
-    // code that runs when incorrect answer is chosen
-    console.log("Keep Trying!");
-    alert("Keep Trying!");
-  }
-};
+skipButton.addEventListener("click", () => {
+  assignImage();
+})
+
+
+
+function assignImage() {
+  const newRandomValue = getRandomFirstValue(keyValueMap);
+  imageElement.setAttribute('src', newRandomValue);
+  getRandomSecondValue(keyValueMap); // Update the secondRandomValue
+}
 
 // function for timer, when start clicked => restart
 var timer = document.getElementById("timer");
@@ -164,15 +166,4 @@ function openInfo() {
   welcomeMessage.style.display = "flex";
 }
 
-function buttonbox() {
-  document.getElementById("start");
-  document.getElementById("help");
-  document.getElementById("skip");
-}
-
-const skipButton = document.getElementById("skip");
-
-function nextImage() {
-
-}
 
