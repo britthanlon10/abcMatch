@@ -60,10 +60,10 @@ const firstRandomValue = getRandomFirstValue(keyValueMap);
 console.log(firstRandomValue);
 imageElement.src = firstRandomValue;
 
-// function assignImage() {
-//   getRandomFirstValue(keyValueMap);
-//   imageElement.setAttribute("src", firstRandomValue);
-// }
+function assignImage() {
+  getRandomFirstValue(keyValueMap);
+  imageElement.setAttribute("src", firstRandomValue);
+}
 
 // picks random letter in keyValueMap
 function getRandomSecondValue(keyValueMap) {
@@ -103,7 +103,6 @@ function matchButtonIdToValue(buttonId) {
   }
 };
 
-
 const thirdRandomValue = getRandomThirdValue(keyValueMap);
 console.log(thirdRandomValue);
 
@@ -115,7 +114,6 @@ const skipButton = document.getElementById("skip");
 skipButton.addEventListener("click", () => {
   assignImage();
 })
-
 
 
 function assignImage() {
